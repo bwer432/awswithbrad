@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/norm_profile.ico" type="Norm's icon" />
+    <title>SysOps on AWS Day 2</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                                &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dev/dev.html">Developing on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dev/dev.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Security Engineering on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin"
+                        target="_blank">Course Materials</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS
+                        Qwiklabs</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS
+                        Console</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/"
+                        target="_blank">AWS Certifications</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="mailto:normakea@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+    </nav>
+
+    <!-- Main Body -->
+
+    <p>
+        <h1>Systems Operations on AWS</h1><h1>Day 2</h1>
+    <table>
+        <tr>
+            <th><b>Module/Lab</b></th>
+            <th><b>Time Estimate</b></th>
+        </tr>
+        <tr>
+            <td>Review</td>
+            <td>9:00 AM - 9:15 AM</td>
+        </tr>
+        <tr>
+            <td>Module 5: Computing (Containers and Serverless)</td>
+            <td>9:15 AM - 11:00 AM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>15 Minutes</td>
+        </tr>
+        <tr>
+            <td>Module 6: Computing (Database Services)</td>
+            <td>11:15 AM - 12:30 PM</td>
+        </tr>
+        <tr>
+            <td><b>Lunch</b></td>
+            <td>12:30 PM - 1:30 PM</td>
+        </tr>
+        <tr>
+            <td>Module 7: Networking</td>
+            <td>1:30 PM - 2:45 PM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>15 Minutes</td>
+        </tr>
+        <tr>
+            <td>Lab 4: Configuring a Virtual Private Cloud (Windows & Linux)</td>
+            <td>3:00 PM - 3:45 PM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>15 Minutes</td>
+        </tr>
+        <tr>
+            <td>Module 8: Storage and Archiving</td>
+            <td>4:00 PM - 5:00 PM</td>
+        </tr>
+    </table>
+    </p>
+    <p>
+    <h2>Resources</h2>
+        <p>The following resource links will provide more information and help reinforce topics covered during Day 2 of SysOps on AWS:</p>
+
+    <h2>Module 5: Computing (Containers and Serverless)</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/containers/" target="_blank">Containers on AWS</a></li>
+        <li><a href="https://aws.amazon.com/eks/" target="_blank">Amazon Elastic Kubernetes Service</a></li>
+        <li><a href="https://aws.amazon.com/kubernetes/" target="_blank">Kubernetes on AWS</a></li>
+        <li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/start-stop-lambda-cloudwatch/"
+                target="_blank">How do I stop and start Amazon EC2 instances at regular intervals using Lambda?</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html" target="_blank">AWS Lambda
+                limits</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-scaling.html" target="_blank">AWS Lambda
+                function scaling</a></li>
+        <li><a href="https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/"
+                target="_blank">Provisioned Concurrency for Lambda Functions</a></li>
+        <li><a href="https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html" target="_blank">Getting
+                Started with AWS Batch</a></li>
+        <li><a href="https://aws.amazon.com/blogs/machine-learning/classify-a-large-number-of-images-with-amazon-rekognition-and-aws-batch/"
+                target="_blank">Classify a Large Number of Images with Amazon Rekognition and AWS Batch</a></li>
+    </ul>
+    <h2>Module 6: Computing (Database Services)</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html"
+                target="_blank">Backing Up and Restoring an Amazon RDS DB Instance</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html"
+                target="_blank">Working with Storage for Amazon RDS DB Instances</a></li>
+        <li><a href="https://aws.amazon.com/rds/features/read-replicas/" target="_blank">Amazon RDS Read Replicas</a>
+        </li>
+        <li><a href="https://aws.amazon.com/rds/aurora/serverless/" target="_blakn">Amazon Aurora Serverless</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html"
+                target="_blank">Amazon Aurora DB Clusters</a></li>
+        <li><a href="https://aws.amazon.com/blogs/database/introducing-the-aurora-storage-engine/"
+                target="_blank">Introducing the Aurora Storage Engine</a></li>
+        <li><a href="https://aws.amazon.com/redshift/features/" target="_blank">Amazon Redshift features</a></li>
+        <li><a href="https://aws.amazon.com/neptune/features/" target="_blank">Amazon Neptune features</a></li>
+        <li><a href="https://aws.amazon.com/elasticache/features/" target="_blank">Amazon ElastiCache features</a></li>
+        <li><a href="https://aws.amazon.com/dms/" target="_blank">AWS Database Migration Service</a></li>
+        <li><a href="https://aws.amazon.com/dms/schema-conversion-tool/" target="_blank">AWS Schema Conversion Tool</a>
+        </li>
+    </ul>
+    <h2>Module 7: Networking</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-vpcs-subnets"
+                target="_blank">VPC and subnets</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html"
+                target="_blank">Updating your security groups to reference peer VPC groups</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/peering/invalid-peering-configurations.html"
+                target="_blank">Unsupported VPC peering configurations</a></li>
+        <li><a href="https://aws.amazon.com/transit-gateway/" target="_blank">AWS Transit Gateway</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html" target="_blank">What is AWS
+                Site-to-Site VPN?</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPN_CloudHub.html" target="_blank">Providing secure
+                communication between sites using VPN CloudHub</a></li>
+        <li><a href="https://media.amazonwebservices.com/AWS_Amazon_VPC_Connectivity_Options.pdf" target="_blank">Amazon
+                Virtual Private Cloud Connectivity Options</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPN_CloudHub.html" target="_blank">Providing secure
+                communication between sites using VPN CloudHub</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html" target="_blank">NAT</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html" target="_blank">NAT
+                Gateways</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html" target="_blank">VPC
+                Endpoints</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html#what-is-privatelink"
+                target="_blank">What is Amazon VPC?</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html" target="_blank">Using DNS with your
+                VPC</a></li>
+        <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-private.html"
+                target="_blank">Working with private hosted zones</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI"
+                target="_blank">IP addresses per network interface per instance type</a></li>
+        <li><a href="https://d1.awsstatic.com/whitepapers/Security/DDoS_White_Paper.pdf" target="_blank">AWS Best
+                Practices for DDoS Resiliency</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-security-groups"
+                target="_blank">Security groups</a></li>
+        <li><a href="https://aws.amazon.com/blogs/security/controlling-network-access-to-ec2-instances-using-a-bastion-server/"
+                target="_blank">Controlling Network Access to EC2 Instances Using a Bastion Server</a></li>
+    </ul>
+    <h2>Module 8: Storage and Archiving</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/ebs/features/" target="_blank">Amazon EBS features</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html" target="_blank">Amazon
+                EBS volume types</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html" target="_blank">Making
+                an Amazon EBS volume available for use on Linux</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html"
+                target="_blank">Initializing Amazon EBS volumes</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html" target="_blank">Amazon
+                EBS–optimized instances</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html"
+                target="_blank">Automating the Amazon EBS snapshot lifecycle</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">Amazon
+                EC2 Instance Store</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/add-instance-store-volumes.html"
+                target="_blank">Add Instance Store Volumes to Your EC2 Instance</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html" target="_blank">Configuring
+                Amazon S3 event notifications</a></li>
+        <li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3.html" target="_blank">Using Amazon
+                S3 with the AWS CLI</a></li>
+        <li><a href="https://aws.amazon.com/s3/storage-classes/" target="_blank">Amazon S3 Storage Classes</a></li>
+        <li><a href="https://aws.amazon.com/s3/storage-classes/#Performance_across_the_S3_Storage_Classes"
+                target="_blank">Performance across the S3 Storage Classes</a></li>
+        <li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html"
+                target="_blank">Using high-level (s3) commands with the AWS CLI</a></li>
+        <li><a href="https://aws.amazon.com/s3/storage-classes/" target="_blank">Amazon S3 Storage Classes</a></li>
+        <li><a href="https://aws.amazon.com/glacier/" target="_blank">Amazon S3 Glacier & S3 Glacier Deep Archive</a>
+        </li>
+        <li><a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html" target="_blank">What Is
+                Amazon S3 Glacier?</a></li>
+        <li><a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/downloading-an-archive-two-steps.html#api-downloading-an-archive-two-steps-retrieval-expedited-capacity"
+                target="_blank">Archive Retrieval Options</a></li>
+        <li><a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/downloading-an-archive-two-steps.html"
+                target="_blank">Retrieving S3 Glacier Archives</a></li>
+    </ul>
+    </p>
+
+
+</body>
+
+</html>

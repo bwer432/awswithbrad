@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/norm_profile.ico" type="Norm's icon" />
+    <title>Advanced Architecting on AWS Day 1</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+        
+        <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                        <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                            &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Security Engineering on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../seceng/seceng_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../seceng/seceng_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../seceng/seceng_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin" target="_blank">Course Materials</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS Qwiklabs</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS Console</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/" target="_blank">AWS Certifications</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="mailto:normakea@amazon.com">Contact Me</a> </li>        
+        </div> <!-- navbar-collapse.// -->
+        </nav>
+
+        <!-- Main Body -->
+        <p>
+        <h1>Advanced Architecting on AWS</h1><h1>Day 1</h1>
+        <table>
+            <tr>
+                <th><b>Module/Lab</b></th>
+                <th><b>Time Estimate</b></th>
+            </tr>
+            <tr>
+                <td>Welcome to Advanced Architecting on AWS</td>
+                <td>9:00 AM - 9:30 AM</td>
+            </tr>
+            <tr>
+                <td>Module 0: Architecting on AWS Review</td>
+                <td>9:30 AM - 10:00 AM</td>
+            </tr>
+            <tr>
+                <td><b>Break</b></td>
+                <td>10 Minutes</td>
+            </tr>
+            <tr>
+                <td>Module 1: AWS Account Management</td>
+                <td>10:10 AM - 10:55 AM</td>
+            </tr>
+            <tr>
+                <td><b>Break</b></td>
+                <td>10 Minutes</td>
+            </tr>
+            <tr>
+                <td>Module 2a: Advanced Networking on AWS Part A</td>
+                <td>11:05 AM - 11:50 AM</td>
+            </tr>
+            <tr>
+                <td><b>Lunch</b></td>
+                <td>11:50 AM - 1:00 PM</td>
+            </tr>
+            <tr>
+                <td>Lab 1: Multi-VPC Connectivity Over VPN</td>
+                <td>1:00 PM - 1:45 PM</td>
+            </tr>
+            <tr>
+                <td><b>Break</b></td>
+                <td>10 Minutes</td>
+            </tr>
+            <tr>
+                <td>Module 2b: Advanced Networking on AWS Part B</td>
+                <td>1:55 PM - 2:40 PM</td>
+            </tr>
+            <tr>
+                <td><b>Break</b></td>
+                <td>10 Minutes</td>
+            </tr>
+            <tr>
+                <td>Module 3: Deployment Management on AWS</td>
+                <td>2:50 PM - 3:35 PM</td>
+            </tr>
+            <tr>
+                <td><b>Break</b></td>
+                <td>10 Minutes</td>
+            </tr>
+            <tr>
+                <td>Class Exercise 1: Build a Hybrid Architecture</td>
+                <td>3:45 PM - 5:00 PM</td>
+            </tr>
+        </table>
+        </p>
+        <p>
+            <h2>Resources</h2>
+                <p>The following resource links will provide more information and help reinforce topics covered during Day 1:</p>
+            <h2>Module 0: Architecting on AWS Review</h2>
+            <ul>
+                <li><a href="https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf" target="_blank">Architecting for the Cloud AWS Best Practices</a></li>
+                <li><a href="http://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf" target="_blank">AWS Well-Architected Framework</a></li>
+                <li><a href="https://d0.awsstatic.com/whitepapers/Storage/data-lake-on-aws.pdf" target="_blank">Building Big Data Storage Solutions (Data Lakes) for Maximum Flexibility</a></li>
+            </ul>
+            <h2>Module 1: AWS Account Management</h2>
+            <ul>
+                <li><a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html" target="_blank">Consolidated billing for AWS Organizations</a></li>
+                <li><a href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/Welcome.html" target="_blank">Resource Groups Tagging API</a></li>
+                <li><a href="https://aws.amazon.com/license-manager/" target="_blank">AWS License Manager</a></li>
+                <li><a href="https://d0.awsstatic.com/aws-answers/AWS_Multi_Account_Security_Strategy.pdf" target="_blank">AWS Multi Account Security Strategy</a></li>
+                <li><a href="https://aws.amazon.com/blogs/security/enable-a-new-feature-in-the-aws-management-console-cross-account-access/" target="_blank">Enable a New Feature in the AWS Management Console: Cross-Account Access</a></li>
+                <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-api.html" target="_blank">Switching to an IAM role (AWS API)</a></li>
+                <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html#tutorial_cross-account-with-roles-3" target="_blank">Test access by switching roles</a></li>
+                <li><a href="https://aws.amazon.com/about-aws/whats-new/2018/10/aws-organizations-supports-aws-directory-service-multi-account-capabilities/" target="_blank">AWS Organizations Supports AWS Directory Service Multi-Account Capabilities</a></li>
+                <li><a href="https://aws.amazon.com/directoryservice/" target="_blank">AWS Directory Service</a></li>
+                <li><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html" target="_blank">What Is AWS Directory Service?</a></li>
+                <li><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_simple_ad.html" target="_blank">Simple Active Directory</a></li>
+                <li><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html" target="_blank">AWS Managed Microsoft AD</a></li>
+                <li><a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_ad_connector.html" target="_blank">Active Directory Connector</a></li>
+                <li><a href="https://docs.aws.amazon.com/ARG/latest/userguide/welcome.html" target="_blank">What is AWS Resource Groups?</a></li>
+            </ul>
+            <h2>Module 2a: Advanced Networking on AWS Part A</h2>
+            <ul>
+                <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Networking.html" target="_blank">VPC networking components</a></li>
+                <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html" target="_blank">VPC endpoints</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html#supported_instances" target="_blank">Enhanced networking types</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html" target="_blank">Enhanced networking on Linux</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking-ena.html" target="_blank">Enabling enhanced networking with the Elastic Network Adapter (ENA) on Linux instances</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/enhanced-networking-ena.html" target="_blank">Enabling enhanced networking with the Elastic Network Adapter (ENA) on Windows instances</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/network_mtu.html#jumbo_frame_instances" target="_blank">Jumbo frames (9001 MTU)</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/network_mtu.html" target="_blank">Network maximum transmission unit (MTU) for your EC2 instance</a></li>
+                <li><a href="https://aws.amazon.com/fsx/lustre/" target="_blank">Amazon FSx for Lustre</a></li>
+                <li><a href="https://aws.amazon.com/fsx/windows/" target="_blank">Amazon FSx for Windows File Server</a></li>
+                <li><a href="https://aws.amazon.com/hpc/efa/" target="_blank">Elastic Fabric Adapter</a></li>
+                <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html" target="_blank">Route tables</a></li>
+                <li><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPNRoutingTypes.html#vpn-route-priority" target="_blank">Route tables and VPN route priority</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">Advanced Encryption Standard</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-2</a></li>
+                <li><a href="https://aws.amazon.com/articles/high-availability-for-amazon-vpc-nat-instances-an-example/" target="_blank">High Availability for Amazon VPC NAT Instances: An Example</a></li>
+                <li><a href="https://media.amazonwebservices.com/AWS_Amazon_VPC_Connectivity_Options.pdf" target="_blank">Amazon Virtual Private Cloud Connectivity Options</a></li>
+            </ul>
+            <h2>Module 2b: Advanced Networking on AWS Part B</h2>
+            <ul>
+                <li><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html" target="_blank">What is AWS Direct Connect?</a></li>
+                <li><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/set-jumbo-frames-vif.html" target="_blank">Setting network MTU for private virtual interfaces or transit virtual interfaces</a></li>
+                <li><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/lags.html" target="_blank">Link aggregation groups</a></li>
+                <li><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html" target="_blank">Classic - AWS Direct Connect</a></li>
+                <li><a href="https://aws.amazon.com/blogs/aws/amazon-efs-update-on-premises-access-via-direct-connect-vpc/" target="_blank">Amazon EFS Update – On-Premises Access via Direct Connect</a></li>
+                <li><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html#RedundantConnections" target="_blank">Configure redundant connections Direct Connections</a></li>
+                <li><a href="https://aws.amazon.com/directconnect/resiliency-recommendation/" target="_blank">AWS Direct Connect Resiliency Recommendations</a></li>
+                <li><a href="https://aws.amazon.com/directconnect/pricing/" target="_blank">AWS Direct Connect pricing</a></li>
+                <li><a href="https://aws.amazon.com/blogs/aws/new-use-an-aws-transit-gateway-to-simplify-your-network-architecture/" target="_blank">Use an AWS Transit Gateway to Simplify Your Network Architecture</a></li>
+                <li><a href="https://docs.aws.amazon.com/vpc/latest/tgw/how-transit-gateways-work.html" target="_blank">How transit gateways work</a></li>
+                <li><a href="https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html" target="_blank">What is a transit gateway?</a></li>
+                <li><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways-intro.html" target="_blank">Direct Connect gateways</a></li>
+                <li><a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-transit-gateways.html" target="_blank">Transit gateway associations</a></li>
+                <li><a href="https://docs.aws.amazon.com/solutions/latest/cisco-based-transit-vpc/welcome.html" target="_blank">Transit Network VPC (Cisco CSR)</a></li>
+                <li><a href="https://aws.amazon.com/vpn/pricing/" target="_blank">AWS Site-to-Site VPN and Accelerated Site-to-Site VPN Connection Pricing</a></li>
+                <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html" target="_blank">Resolving DNS queries between VPCs and your network</a></li>
+                <li><a href="https://aws.amazon.com/blogs/aws/new-vpc-ingress-routing-simplifying-integration-of-third-party-appliances/" target="_blank">VPC Ingress Routing – Simplifying Integration of Third-Party Appliances</a></li>
+                <li><a href="https://tools.ietf.org/html/rfc2784" target="_blank">RFC 2784 - Generic Routing Encapsulation (GRE)</a></li>
+                <li><a href="https://aws.amazon.com/articles/overlay-multicast-in-amazon-virtual-private-cloud/" target="_blank">Overlay Multicast in Amazon Virtual Private Cloud</a></li>
+                <li><a href="https://www.youtube.com/watch?v=-klyaq9R0XU#t=25m45s" target="_blank">AWS re:Invent 2014 | (ARC401) Black-Belt Networking for the Cloud Ninja</a></li>
+            </ul>
+            <h2>Module 3: Deployment Management on AWS</h2>
+            <ul>
+                <li><a href="http://d0.awsstatic.com/whitepapers/overview-of-deployment-options-on-aws.pdf" target="_blank">Overview of Deployment Options on AWS</a></li>
+                <li><a href="https://d0.awsstatic.com/whitepapers/managing-your-aws-infrastructure-at-scale.pdf" target="_blank">Managing Your AWS Infrastructure at Scale</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html" target="_blank">AWS CloudFormation stack updates</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-product-attribute-reference.html" target="_blank">Resource attribute reference</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html" target="_blank">Updating stacks using change sets</a></li>
+                <li><a href="https://aws.amazon.com/blogs/devops/build-a-continuous-delivery-pipeline-for-your-container-images-with-amazon-ecr-as-source/" target="_blank">Build a Continuous Delivery Pipeline for Your Container Images with Amazon ECR as Source</a></li>
+                <li><a href="https://aws.amazon.com/codedeploy/product-integrations/" target="_blank">AWS CodeDeploy product integrations</a></li>
+                <li><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html" target="_blank">CodeDeploy deployments</a></li>
+                <li><a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html" target="_blank">AppSpec 'hooks' section</a></li>
+                <li><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.deploy-existing-version.html" target="_blank">Deploying applications to Elastic Beanstalk environments</a></li>
+                <li><a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html" target="_blank">Adding Apps with AWS OpsWorks</a></li>
+                <li><a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-deploying.html" target="_blank">Deploying Apps with AWS OpsWorks</a></li>
+                <li><a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html" target="_blank">Cookbooks and Recipes with AWS OpsWorks</a></li>
+                <li><a href="https://aws.amazon.com/about-aws/whats-new/2016/12/amazon-ecs-supports-windows-server-containers/" target="_blank">Amazon ECS Supports Windows Server Containers</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html" target="_blank">Amazon ECS clusters</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_instances.html" target="_blank">Amazon ECS container instances</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html" target="_blank">Amazon ECS services</a></li>
+                <li><a href="https://aws.amazon.com/blogs/devops/use-aws-codedeploy-to-implement-blue-green-deployments-for-aws-fargate-and-amazon-ecs/" target="_blank">Use AWS CodeDeploy to Implement Blue/Green Deployments for AWS Fargate and Amazon ECS</a></li>
+            </ul>
+            </p>
+</body>
+
+</html>

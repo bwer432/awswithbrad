@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/norm_profile.ico" type="Norm's icon" />
+    <title>SysOps on AWS Day 3</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                                &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dev/dev.html">Developing on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dev/dev.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Security Engineering on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin"
+                        target="_blank">Course Materials</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS
+                        Qwiklabs</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS
+                        Console</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/"
+                        target="_blank">AWS Certifications</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="mailto:normakea@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+    </nav>
+
+    <!-- Main Body -->
+
+    <p>
+        <h1>Systems Operations on AWS</h1><h1>Day 3</h1>
+    <table>
+        <tr>
+            <th><b>Module/Lab</b></th>
+            <th><b>Time Estimate</b></th>
+        </tr>
+        <tr>
+            <td>Lab 5: Managing Storage in AWS (Windows & Linux) </td>
+            <td>9:00 AM - 9:45 AM</td>
+        </tr>
+        <tr>
+            <td>Module 9: Monitoring and Security</td>
+            <td>9:45 AM - 11:00 AM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>10 Minutes</td>
+        </tr>
+        <tr>
+            <td>Lab 6: Monitoring Your Application and Infrastructure</td>
+            <td>11:10 AM - 11:50 AM</td>
+        </tr>
+        <tr>
+            <td><b>Lunch</b></td>
+            <td>11:50 AM - 12:50 PM</td>
+        </tr>
+        <tr>
+            <td>Module 10: Managing Resource Consumption</td>
+            <td>12:50 PM - 2:05 PM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>10 Minutes</td>
+        </tr>
+        <tr>
+            <td>Lab 7: Managing Resources With Tagging</td>
+            <td>2:15 PM - 3:00 PM</td>
+        </tr>
+        <tr>
+            <td>Module 11: Creating Automated and Repeatable Deployments</td>
+            <td>3:00 PM - 4:15 PM</td>
+        </tr>
+        <tr>
+            <td>Lab 8: Automating Deployments with Cloud Formation</td>
+            <td>4:15 PM - 5:00 PM</td>
+        </tr>
+    </table>
+    </p>
+    <p>
+    <h2>Resources</h2>
+        <p>The following resource links will provide more information and help reinforce topics covered during Day 3 of SysOps on AWS:</p>
+
+    <h2>Module 9: Monitoring and Security</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html"
+                target="_blank">Amazon CloudWatch Concepts</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html"
+                target="_blank">Using Amazon CloudWatch Alarms</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html"
+                target="_blank">Enable or disable detailed monitoring for your instances</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html"
+                target="_blank">Schedule Expressions for Rules</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/EventTypes.html"
+                target="_blank">CloudWatch Events Event Examples From Supported Services</a></li>
+        <li><a href="https://aws.amazon.com/cloudwatch/features/" target="_blank">Amazon CloudWatch Features</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html"
+                target="_blank">CloudWatch Logs Agent Reference</a></li>
+        <li><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html"
+                target="_blank">What Is AWS CloudTrail?</a></li>
+        <li><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-getting-started.html"
+                target="_blank">Working with CloudTrail</a></li>
+        <li><a href="https://aws.amazon.com/security/" target="_blank">AWS Cloud Security</a></li>
+    </ul>
+    <h2>Module 10: Managing Resource Consumption</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/config/latest/developerguide/required-tags.html"
+                target="_blank">Required-tags</a></li>
+        <li><a href="https://netflixtechblog.com/conformity-monkey-keeping-your-cloud-instances-following-best-practices-2aaff3479adc"
+                target="_blank">Conformity Monkey - Keeping your cloud instances following best practices</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html"
+                target="_blankd">RunInstances</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html"
+                target="_blank">CreateVolume</a></li>
+        <li><a href="https://aws.amazon.com/blogs/aws/new-tag-ec2-instances-ebs-volumes-on-creation/"
+                target="_blankd">Tag EC2 Instances & EBS Volumes on Creation</a></li>
+        <li><a href="https://aws.amazon.com/ec2/instance-types/t2/" target="_blankd">Amazon EC2 T2 Instances</a></li>
+        <li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/start-stop-lambda-cloudwatch/"
+                target="_blank">How do I stop and start Amazon EC2 instances at regular intervals using Lambda?</a></li>
+        <li><a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html"
+                target="_blank">Consolidated billing for AWS Organizations</a></li>
+        <li><a href="https://aws.amazon.com/premiumsupport/technology/trusted-advisor/" target="_blank">AWS Trusted
+                Advisor</a></li>
+        <li><a href="https://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/"
+                target="_blank">AWS Trusted Advisor best practice checklist</a></li>
+    </ul>
+    <h2>Module 11: Creating Automated and Repeatable Deployments</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/marketplace/latest/userguide/best-practices-for-building-your-amis.html"
+                target="_blank">Best practices for building AMIs</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html"
+                target="_blank">Creating an Amazon EBS-backed Linux AMI</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2launch.html" target="_blank">Configuring
+                a Windows instance using EC2Launch</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/CopyingAMIs.html" target="_blank">Copying an
+                AMI</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Declarative_programming" target="_blank">Declarative programming</a>
+        </li>
+        <li><a href="https://docs.aws.amazon.com/toolkit-for-eclipse/v1/user-guide/tke-cfn-editor.html"
+                target="_blank">The AWS CloudFormation Template Editor</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html"
+                target="_blank">CloudFormation Parameter</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html"
+                target="_blank">CloudFormation Ref</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html"
+                target="_blank">CloudFormation Fn::GetAtt</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html"
+                target="_blank">Intrinsic Function Reference</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html"
+                target="_blank">Pseudo Parameters Reference</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html"
+                target="_blank">CloudFormation Mapping</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html"
+                target="_blank">CloudFormation Resource</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html"
+                target="_blank">CloudFormation cfn-init</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/deploying.applications.html"
+                target="_blank">Deploying Applications on Amazon EC2 with AWS CloudFormation</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-windows-stacks-bootstrapping.html"
+                target="_blank">Bootstrapping AWS CloudFormation Windows Stacks</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html"
+                target="_blank">AWS::CloudFormation::Init</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html"
+                target="_blank">Troubleshooting AWS CloudFormation</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html"
+                target="_blank">AWS CloudFormation Best Practices</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-exports.html"
+                target="_blank">Exporting Stack Output Values</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html"
+                target="_blank">Working with AWS CloudFormation StackSets</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-api-logging-cloudtrail.html"
+                target="_blank">Logging AWS CloudFormation API Calls with AWS CloudTrail</a></li>
+        <li><a href="https://cfn101.solution.builders/" target="_blank">CloudFormation Bootcamp</a></li>
+    </ul>
+    </p>
+
+</body>
+
+</html>
