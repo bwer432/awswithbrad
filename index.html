@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/norm_profile.ico" type="Norm's icon" />
-    <title>Norm's Class Links</title>
-
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="person-icon.png" type="image/png" />
+    <title>Learn AWS with Brad Werner</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -23,7 +21,6 @@
 </head>
 
 <body>
-
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
@@ -36,14 +33,6 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="dropdown-item" href="advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
-                        <ul class="submenu dropdown-menu">
-                            <li><a class="dropdown-item" href="advarc/advarc.html">Overview</a></li>
-                            <li><a class="dropdown-item" href="advarc/advarc_day1.html">Day 1</a></li>
-                            <li><a class="dropdown-item" href="advarc/advarc_day2.html">Day 2</a></li>
-                            <li><a class="dropdown-item" href="advarc/advarc_day3.html">Day 3</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item"><a class="dropdown-item" href="arch/arch.html">Architecting on AWS &raquo </a>
                         <ul class="submenu dropdown-menu">
                             <li><a class="dropdown-item" href="arch/arch.html">Overview</a></li>
@@ -52,19 +41,31 @@
                             <li><a class="dropdown-item" href="arch/arch_day3.html">Day 3</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="dropdown-item" href="arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
-                        </a>
+                    <li class="nav-item"><a class="dropdown-item" href="advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
                         <ul class="submenu dropdown-menu">
-                            <li><a class="dropdown-item" href="arcacc/arcacc.html">Overview</a></li>
-                            <li><a class="dropdown-item" href="arcacc/arcacc_day1.html">Day 1</a></li>
-                            <li><a class="dropdown-item" href="arcacc/arcacc_day2.html">Day 2</a></li>
-                            <li><a class="dropdown-item" href="arcacc/arcacc_day3.html">Day 3</a></li>
-                            <li><a class="dropdown-item" href="arcacc/arcacc_day4.html">Day 4</a></li>
-                            <li><a class="dropdown-item" href="arcacc/arcacc_day5.html">Day 5</a></li>
+                            <li><a class="dropdown-item" href="advarc/advarc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="advarc/advarc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="advarc/advarc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="advarc/advarc_day3.html">Day 3</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="dropdown-item" href="cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
-                    </a>
+                    <li class="nav-item"><a class="dropdown-item" href="dev/dev.html">Developing on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="dev/dev.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="dev/dev_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="dev/dev_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="dev/dev_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="sysops/sysops.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="sysops/sysops_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="sysops/sysops_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="sysops/sysops_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo </a>
                     <ul class="submenu dropdown-menu">
                         <li><a class="dropdown-item" href="cpe/cpe.html">Overview</a></li>
                         <li><a class="dropdown-item" href="cpe/cpe_day1.html">Day 1</a></li>
@@ -76,55 +77,22 @@
                             <li><a class="dropdown-item" href="tess/tess_day1.html">Day 1</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="dropdown-item" href="financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
-                            &raquo </a>
-                        <ul class="submenu dropdown-menu">
-                            <li><a class="dropdown-item" href="financial_mgmt/financial_mgmt">Overview</a></li>
-                            <li><a class="dropdown-item" href="financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
-                            <li><a class="dropdown-item" href="financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
-                            <li><a class="dropdown-item" href="financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="dropdown-item" href="dev/dev.html">Developing on AWS &raquo </a>
-                        <ul class="submenu dropdown-menu">
-                            <li><a class="dropdown-item" href="dev/dev.html">Overview</a></li>
-                            <li><a class="dropdown-item" href="dev/dev_day1.html">Day 1</a></li>
-                            <li><a class="dropdown-item" href="dev/dev_day2.html">Day 2</a></li>
-                            <li><a class="dropdown-item" href="dev/dev_day3.html">Day 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="dropdown-item" href="seceng/seceng_mgmt.html">Security Engineering on AWS &raquo </a>
-                        <ul class="submenu dropdown-menu">
-                            <li><a class="dropdown-item" href="seceng/seceng_mgmt.html">Overview</a></li>
-                            <li><a class="dropdown-item" href="seceng/seceng_day1.html">Day 1</a></li>
-                            <li><a class="dropdown-item" href="seceng/seceng_day2.html">Day 2</a></li>
-                            <li><a class="dropdown-item" href="seceng/seceng_day3.html">Day 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="dropdown-item" href="sysops/sysops.html">Systems Operations on AWS &raquo </a>
-                        <ul class="submenu dropdown-menu">
-                            <li><a class="dropdown-item" href="sysops/sysops.html">Overview</a></li>
-                            <li><a class="dropdown-item" href="sysops/sysops_day1.html">Day 1</a></li>
-                            <li><a class="dropdown-item" href="sysops/sysops_day2.html">Day 2</a></li>
-                            <li><a class="dropdown-item" href="sysops/sysops_day3.html">Day 3</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </li>
             <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin" target="_blank">Course Materials</a> </li>
             <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS Qwiklabs</a> </li>
             <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS Console</a> </li>
             <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/" target="_blank">AWS Certifications</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="mailto:normakea@amazon.com">Contact Me</a> </li>        
+            <li class="nav-item"> <a class="nav-link" href="mailto:bradswer@amazon.com">Contact Me</a> </li>        
         </div> <!-- navbar-collapse.// -->
         </nav>
 
-    <!-- About Norm -->
+    <!-- About Brad -->
 
-    <div class="about-norm">
-        <h1>Norm Kean</h1>
-        <img class="norm-photo" src="images/Norm_Profile.jpg" alt="Norman Kean">
-        <p>I am a technical trainer with Amazon Web Services. I get to teach customers and AWS employees about our
+    <div class="about-person">
+        <h1>Brad Werner</h1>
+        <img class="person-photo" src="person.jpeg" alt="Brad Werner">
+        <p>I am a senior technical trainer with Amazon Web Services (AWS). I get to teach customers and AWS employees about our
             platform and how to build services on it. My goal with every class is to have every person learn new skills
             they can use to improve themselves, their company, and the world.</p>
     </div>
@@ -133,13 +101,13 @@
         <p>
         <h1>Attendee Todo List</h1>
 
-        <p style="font-size: 20px">Good Morning, please use the same email address for the three tasks below. Make sure
-            that you use an email address that can be accessed from the location:</p>
+        <p style="font-size: 20px">Welcome! Please use the same email address for the three tasks below. Make sure
+            that you use an email address that can be accessed from your current location:</p>
         <ol>
             <li><strong>Register for course: </strong>locate the course event in your calendar (or in your inbox), and
-                click on the registration link. This is to ensure your training and certifications are captured.</li>
+                click on the registration link. This is to ensure your training and certifications are added to your transcript.</li>
             <li><strong>Register for the labs: </strong><a href="https://aws.qwiklabs.com/"
-                    target="_blank">https://aws.qwiklabs.com</a>&nbsp;&nbsp;The classroom will be available after the
+                    target="_blank">https://aws.qwiklabs.com</a>&nbsp;&nbsp;The lab systems will be available after the
                 first break. </li>
             <li><strong>Register for the course materials: </strong><a
                     href="https://evantage.gilmoreglobal.com/#/user/signin"
@@ -150,7 +118,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
