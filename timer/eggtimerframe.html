@@ -69,7 +69,6 @@
     }
     </style>
     <script src="https://cdn.usefathom.com/script.js" data-site="UADLTMQF" excluded-domains="localhost" honor-dnt="true" spa="auto" defer="defer"></script>
-    <!-- <link href="/static/css/main.6a9484a9.chunk.css" rel="stylesheet"> -->
     <link href="eggtimerstyle.css" rel="stylesheet">
 </head>
 <body>
@@ -134,7 +133,7 @@
                 6: 1,
                 7: 1
             }[e] && t.push(o[e] = new Promise((function(t, r) {
-                for (var n = "eggtimerstyle" + ({}[e] || e) + ".css", a = i.p + n, u = document.getElementsByTagName("link"), c = 0; c < u.length; c++) {
+                for (var n = "/timer/eggtimerstyle" + ({}[e] || e) + ".css", a = n, u = document.getElementsByTagName("link"), c = 0; c < u.length; c++) {
                     var l = (f = u[c]).getAttribute("data-href") || f.getAttribute("href");
                     if ("stylesheet" === f.rel && (l === n || l === a))
                         return t()
@@ -178,7 +177,7 @@
                     c.timeout = 120,
                     i.nc && c.setAttribute("nonce", i.nc),
                     c.src = function(e) {
-                        return i.p + "eggtimer" + ({}[e] || e) + ".js"
+                        return "/timer/eggtimer" + ({}[e] || e) + ".js"
                     }(e);
                     var l = new Error;
                     u = function(t) {
@@ -266,9 +265,7 @@
         r()
     }([])
     </script>
-    <!-- <script src="/static/js/2.97152abf.chunk.js"></script> -->
     <script src="eggtimer1.js"></script>
-    <!-- <script src="/static/js/main.a1239fbb.chunk.js"></script> -->
     <script src="eggtimer2.js"></script>
 </body>
 </html>
