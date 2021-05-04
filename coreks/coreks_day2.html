@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="person-icon.png" type="image/png" />
+    <title>EKS Day 2</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+        
+        <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                        <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                            &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../dev/dev.html">Developing on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../dev/dev.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../dev/dev_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../dev/dev_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../dev/dev_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../dss/dss.html">Developing Serverless Solutions on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../dss/dss.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../dss/dss_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../dss/dss_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../dss/dss_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="../coreks/coreks.html">Running Containers on Amazon Elastic Kubernetes Service &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks.html">Overview</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks_day1.html">Day 1</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks_day2.html">Day 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks_day3.html">Day 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../siseco/siseco.html">Security Engineering on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../siseco/siseco.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../siseco/siseco_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../siseco/siseco_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../siseco/siseco_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin" target="_blank">Course Materials</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS Qwiklabs</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS Console</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/" target="_blank">AWS Certifications</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="mailto:bradswer@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+        </nav>
+
+        <!-- Main Body -->
+        <p>
+            <h1>Running Containers on Amazon Elastic Kubernetes Service</h1><h1>Day 2</h1>
+            <table>
+                <tr>
+                    <th><b>Module/Lab</b></th>
+                    <th><b>Time Estimate</b></th>
+                </tr>
+                <tr>
+                    <td><b>Review</b></td>
+                    <td>9:00 AM - 9:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Module 5: Deploying applications to your Amazon EKS cluster</td>
+                    <td>9:30 AM - 10:40 AM</td>
+                </tr>
+                <tr>
+                    <td><b>Break</b></td>
+                    <td>10 Minutes</td>
+                </tr>
+                <tr>
+                    <td>Lab 3: Deploying applications</td>
+                    <td>10:50 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td><b>Lunch</b></td>
+                    <td>12:00 PM - 1:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Module 6: Configuring observability in Amazon EKS</td>
+                    <td>1:00 PM - 2:05 PM</td>
+                </tr>
+                <tr>
+                    <td><b>Break</b></td>
+                    <td>10 Minutes</td>
+                </tr>
+                <tr>
+                    <td>Lab 4: Monitoring Amazon EKS</td>
+                    <td>2:15 PM - 3:15 PM</td>
+                </tr>
+                <tr>
+                    <td><b>Break</b></td>
+                    <td>10 Minutes</td>
+                </tr>
+                <tr>
+                    <td>Module 7: Balancing Efficiency, Resilience, and Cost Optimization in Amazon EKS</td>
+                    <td>3:25 PM - 4:50 PM</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+            <h2>Resources</h2>
+                <p>The following resource links will provide more information and help reinforce topics covered during Day 2:</p>
+            <h2>Module 5: Deploying applications to your Amazon EKS cluster</h2>
+            <ul>
+                <li><a href="https://aws.amazon.com/ecr/" target="_blank">Amazon Elastic Container Registry</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html" target="_blank">Creating a repository</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html" target="_blank">Image tag mutability</a></li>
+                <li><a href="https://docs.helm.sh/" target="_blank">The package manager for Kubernetes</a></li>
+                <li><a href="https://www.weave.works/blog/what-is-gitops-really" target="_blank">What Is GitOps</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html" target="_blank">What is Amazon Elastic Container Registry?</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/vpc-endpoints.html#ecr-setting-up-s3-gateway" target="_blank">Create the Amazon S3 gateway endpoint</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/helm.html" target="_blank">Using Helm with Amazon EKS</a></li>
+                <li><a href="https://www.weave.works/blog/oss-product-flagger-eksctl" target="_blank">eksctl and Flagger</a></li>
+                <li><a href="https://medium.com/@jason.umiker/the-three-paths-of-kubernetes-in-the-cloud-a6e88a321e2e" target="_blank">The three paths of Kubernetes in the Cloud</a></li>
+                <li><a href="https://github.com/jasonumiker/k8s-plus-aws-gitops" target="_blank">An example approach for Kubernetes and AWS GitOps</a></li>
+                <li><a href="https://aws.amazon.com/blogs/opensource/continuous-integration-using-jenkins-and-hashicorp-terraform-on-amazon-eks/" target="_blank">Continuous Integration using Jenkins and HashiCorp Terraform on Amazon EKS</a></li>
+                <li><a href="https://aws.amazon.com/blogs/opensource/continuous-delivery-spinnaker-amazon-eks/" target="_blank">Continuous Delivery using Spinnaker on Amazon EKS</a></li>
+                <li><a href="https://www.weave.works/blog/aws-container-days-managing-eks-at-scale-with-gitops" target="_blank">AWS Container Days - Managing EKS at Scale with GitOps</a></li>
+                <li><a href="https://www.weave.works/blog/automate-eks-cluster-configuration-with-gitops-and-eksctl" target="_blank">Automate EKS Cluster Configuration with GitOps and Eksctl</a></li>
+                <li><a href="https://www.youtube.com/watch?v=3IbJK90rb_M" target="_blank">Kubernetes GitOps on AWS - Level 400</a></li>
+                <li><a href="https://www.eksworkshop.com/intermediate/290_argocd/" target="_blank">Continuous Deployment with Argocd Workshop</a></li>
+                <li><a href="https://www.eksworkshop.com/intermediate/260_weave_flux/installweaveflux/" target="_blank">Install Weave Flux Workshop</a></li>
+                <li><a href="https://aws.amazon.com/blogs/opensource/continuous-delivery-spinnaker-amazon-eks/" target="_blank">Continuous Delivery using Spinnaker on Amazon EKS</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/push-oci-artifact.html" target="_blank">Pushing a Helm chart</a></li>
+                <li><a href="https://github.com/kubernetes-sigs/cluster-api-provider-aws" target="_blank">Kubernetes Cluster API Provider AWS</a></li>
+                <li><a href="https://www.weave.works/blog/manage-thousands-of-clusters-with-gitops-and-the-cluster-api" target="_blank">Manage Thousands of Clusters with GitOps and the Cluster API</a></li>
+                <li><a href="https://www.weave.works/blog/bottlerocket-with-fork-clone-run" target="_blank">Bottlerocket with Fork, Clone, Run! - A Container Optimized OS with a GitOps model</a></li>
+                <li><a href="https://cdk8s.io/" target="_blank">CDK for Kubernetes</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/aws-controllers-for-kubernetes-ack/" target="_blank">Introducing the AWS Controllers for Kubernetes (ACK)</a></li>
+                <li><a href="https://cdk-eks-devops.workshop.aws/en/" target="_blank">Manage your EKS Cluser ni Full-Stack with CDK Workshop</a></li>
+                <li><a href="https://github.com/awslabs/cdk8s" target="_blank">Cloud Development Kit for Kubernetes</a></li>
+            </ul>
+            <h2>Module 6: Configuring observability in Amazon EKS</h2>
+            <ul>
+                <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-EKS-quickstart.html" target="_blank">Quick Start Setup for Container Insights on Amazon EKS and Kubernetes</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html" target="_blank">Amazon EKS control plane logging</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-metrics-EKS.html" target="_blank">Amazon EKS and Kubernetes Container Insights Metrics</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-view-metrics.html" target="_blank">Viewing Container Insights Metrics</a></li>
+                <li><a href="https://aws.amazon.com/blogs/compute/scaling-kubernetes-deployments-with-amazon-cloudwatch-metrics/" target="_blank">Scaling Kubernetes deployments with Amazon CloudWatch metrics</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/prometheus.html" target="_blank">Control plane metrics with Prometheus</a></li>
+                <li><a href="https://aws.amazon.com/blogs/opensource/centralized-container-logging-fluent-bit/" target="_blank">Centralized Container Logging with Fluent Bit</a></li>
+                <li><a href="https://aws.amazon.com/blogs/opensource/amazon-eks-control-plane-metrics-prometheus/" target="_blank">Amazon EKS Control Plane Metrics with Prometheus</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/using-prometheus-metrics-in-amazon-cloudwatch/" target="_blank">Using Prometheus Metrics in Amazon CloudWatch</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/kubernetes-logging-powered-by-aws-for-fluent-bit/" target="_blank">Kubernetes Logging powered by AWS for Fluent Bit</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-logs.html" target="_blank">Set Up FluentD as a DaemonSet to Send Logs to CloudWatch Logs</a></li>
+                <li><a href="https://www.datadoghq.com/blog/monitoring-kubernetes-performance-metrics/" target="_blank">Monitoring Kubernetes performance metrics</a></li>
+                <li><a href="https://www.datadoghq.com/blog/eks-cluster-metrics/" target="_blank">Key metrics for Amazon EKS monitoring</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/monitoring-amazon-eks-on-aws-fargate-using-prometheus-and-grafana/" target="_blank">Monitoring Amazon EKS on AWS Fargate using Prometheus and Grafana</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/how-to-capture-application-logs-when-using-amazon-eks-on-aws-fargate/" target="_blank">How to capture application logs when using Amazon EKS on AWS Fargate</a></li>
+                <li><a href="https://www.youtube.com/watch?v=HaT9Yc1g170" target="_blank">AWS Container Logging Deep Dive: FireLens, Fluentd, and Fluent Bit - AWS Online Tech Talks</a></li>
+                <li><a href="http://blog.itaysk.com/2019/01/15/Kubernetes-metrics-and-monitoring" target="_blank">Kubernetes Metrics and Monitoring</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/prometheus.html" target="_blank">Control plane metrics with Prometheus</a></li>
+                <li><a href="https://www.replex.io/blog/kubernetes-in-production-best-practices-for-cluster-autoscaler-hpa-and-vpa" target="_blank">Kubernetes Autoscaling in Production: Best Practices for Cluster Autoscaler, HPA and VPA</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/autoscaling-amazon-eks-services-based-on-custom-prometheus-metrics-using-cloudwatch-container-insights/" target="_blank">Autoscaling Amazon EKS services based on custom Prometheus metrics using CloudWatch Container Insights</a></li>
+                <li><a href="https://www.openshift.com/blog" target="_blank">OpenShift blog</a></li>
+                <li><a href="https://www.eksworkshop.com/010_introduction/" target="_blank">Introduction to Kubernetes Workshop</a></li>
+                <li><a href="https://www.eksworkshop.com/intermediate/240_monitoring/deploy-prometheus/" target="_blank">Deploy Prometheus Workshop</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights-Prometheus-install-EKS.html" target="_blank">Set Up and Configure Prometheus Metrics Collection on Amazon EKS and Kubernetes clusters</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights-Prometheus-Setup-configure.html#ContainerInsights-Prometheus-Setup-new-exporters" target="_blank">Tutorial for Adding a New Prometheus Scrape Target: Prometheus API Server Metrics</a></li>
+            </ul>
+            <h2>Module 7: Balancing Efficiency, Resilience, and Cost Optimization in Amazon EKS</h2>
+            <ul>
+                <li><a href="https://kubernetes.io/docs/tasks/run-application/configure-pdb/" target="_blank">Specifying a Disruption Budget for your Application</a></li>
+                <li><a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-rightsizing.html" target="_blank">Optimizing your cost with Rightsizing Recommendations</a></li>
+                <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html" target="_blank">Spot Instances</a></li>
+                <li><a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html" target="_blank">Auto Scaling groups with multiple instance types and purchase options</a></li>
+                <li><a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html" target="_blank">Using Cost Allocation Tags</a></li>
+                <li><a href="https://docs.aws.amazon.com/ARG/latest/userguide/tag-editor.html" target="_blank">Tag Editor</a></li>
+                <li><a href="https://kubernetes.io/docs/setup/best-practices/cluster-large/" target="_blank">Considerations for large clusters</a></li>
+                <li><a href="https://medium.com/scout24-engineering/cluster-overprovisiong-in-kubernetes-79433cb3ed0e" target="_blank">Cluster overprovisioning in Kubernetes</a></li>
+                <li><a href="https://medium.com/swlh/deploying-kubernetes-deciding-the-size-of-your-nodes-a115e770e09" target="_blank">Deploying Kubernetes — Deciding the size of your nodes</a></li>
+                <li><a href="https://aws.amazon.com/blogs/compute/cost-optimization-and-resilience-eks-with-spot-instances/" target="_blank">Building for Cost optimization and Resilience for EKS with Spot Instances</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/cost-optimization-for-kubernetes-on-aws/" target="_blank">Cost optimization for Kubernetes on AWS</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/saving-money-pod-at-time-with-eks-fargate-and-aws-compute-savings-plans/" target="_blank">Saving money a pod at a time with EKS, Fargate, and AWS Compute Savings Plans</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/how-to-track-costs-in-multi-tenant-amazon-eks-clusters-using-kubecost/" target="_blank">How to track costs in multi-tenant Amazon EKS clusters using Kubecost</a></li>
+                <li><a href="https://www.youtube.com/watch?v=F60emoW3sfs" target="_blank">Save Costs Running Kubernetes Clusters with EC2 Spot Instances - AWS Online Tech Talks</a></li>
+                <li><a href="https://github.com/kubernetes-sigs/cluster-proportional-autoscaler" target="_blank">Horizontal cluster-proportional-autoscaler container</a></li>
+                <li><a href="https://github.com/aws/aws-node-termination-handler" target="_blank">AWS Node Termination Handler</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate.html" target="_blank">AWS Fargate</a></li>
+                <li><a href="https://aws.amazon.com/blogs/aws/new-aws-fargate-for-amazon-eks-now-supports-amazon-efs/" target="_blank">AWS Fargate for Amazon EKS now supports Amazon EFS</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami-bottlerocket.html" target="_blank">Amazon EKS optimized Bottlerocket AMIs</a></li>
+                <li><a href="https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#how-can-i-configure-overprovisioning-with-cluster-autoscaler" target="_blank">How can I configure overprovisioning with Cluster Autoscaler?</a></li>
+                <li><a href="https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets" target="_blank">Pod disruption budgets</a></li>
+            </ul>
+            <br>    
+        </p>
+
+
+</body>
+
+</html>
