@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/norm_profile.ico" type="Norm's icon" />
+    <title>Developing Serverless Solutions on AWS Day 1</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                                &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dev/dev.html">Developing on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dev/dev.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dss/dss.html">Developing Serverless Solutions on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dss/dss.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="../seceng/seceng_mgmt.html">Running Containers on Amazon Elastic Kubernetes Service &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks.html">Overview</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks_day1.html">Day 1</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks_day2.html">Day 2</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks_day3.html">Day 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Security Engineering on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin"
+                        target="_blank">Course Materials</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS
+                        Qwiklabs</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS
+                        Console</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/"
+                        target="_blank">AWS Certifications</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="mailto:normakea@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+    </nav>
+
+    <!-- Main Body -->
+
+    <p>
+        <h1>Developing Serverless Solutions on AWS</h1><h1>Day 2</h1>
+    <table>
+        <tr>
+            <th><b>Module/Lab</b></th>
+            <th><b>Time Estimate</b></th>
+        </tr>
+        <tr>
+            <td>Day 1 Review</td>
+            <td>9:00 AM - 9:30 AM</td>
+        </tr>
+        <tr>
+            <td>Module 7: Writing good Lambda functions</td>
+            <td>9:30 AM - 10:45 AM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>15 Minutes</td>
+        </tr>
+        <tr>
+            <td>Module 8: Step Functions for orchestration</td>
+            <td>11:00 AM - 11:40 AM</td>
+        </tr>
+        <tr>
+            <td><b>Lunch</b></td>
+            <td>11:40 AM - 12:40 PM</td>
+        </tr>
+        <tr>
+            <td>Lab 3: Workflow Orchestration Using AWS Step Functions</td>
+            <td>12:40 PM - 1:40 PM</td>
+        </tr>
+        <tr>
+            <td>Module 9: Observability and Monitoring</td>
+            <td>1:40 PM - 2:40 PM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>15 Minutes</td>
+        <tr>
+            <td>Lab 4: Observability and Monitoring</td>
+            <td>2:55 PM - 4:30 PM</td>
+        </tr>
+    </table>
+    </p>
+    <p>
+    <h2>Resources</h2>
+    <p>The following resource links will provide more information and help reinforce topics covered during the Cloud
+    Practitioner Essentials course:</p>
+    <h2>Module 7: Writing good Lambda functions</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/lambda/" target="_blank">AWS Lambda</a></li>
+        <li><a href="https://aws.amazon.com/lambda/resources/?aws-lambda-resources-blog.sort-by=item.additionalFields.createdDate&aws-lambda-resources-blog.sort-order=desc" target="_blank">AWS Lambda resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html" target="_blank">What is AWS Lambda?</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html" target="_blank">Best practices for working with AWS Lambda functions</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html" target="_blank">Using AWS Lambda with other services</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html" target="_blank">AWS Lambda execution environment</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-troubleshooting.html" target="_blank">Troubleshooting issues in Lambda</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-access-metrics.html" target="_blank">Monitoring functions in the AWS Lambda console</a></li>
+        <li><a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-test-and-debug.html" target="_blank">Testing and debugging serverless applications</a></li>
+        <li><a href="https://aws.amazon.com/blogs/opensource/simplifying-serverless-best-practices-with-lambda-powertools/" target="_blank">Simplifying serverless best practices with Lambda Powertools</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/using-lambda-layers-to-simplify-your-development-process/" target="_blank">Using Lambda layers to simplify your development process</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/" target="_blank">Working with AWS Lambda and Lambda Layers in AWS SAM</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/jump-starting-your-serverless-development-environment/" target="_blank">Jump-starting your serverless development environment</a></li>
+        <li><a href="https://aws.amazon.com/blogs/opensource/improving-the-serverless-developer-experience-with-sls-dev-tools/" target="_blank">Improving the serverless developer experience with sls-dev-tools</a></li>
+        <li><a href="https://aws.amazon.com/blogs/developer/tuning-the-aws-java-sdk-2-x-to-reduce-startup-time/" target="_blank">Tuning the AWS Java SDK 2.x to reduce startup time</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/optimizing-batch-processing-with-custom-checkpoints-in-aws-lambda/" target="_blank">Optimizing batch processing with custom checkpoints in AWS Lambda</a></li>
+        <li><a href="https://www.youtube.com/watch?v=xmacMfbrG28" target="_blank">AWS re:Invent 2019: A serverless journey: AWS Lambda under the hood</a></li>
+        <li><a href="https://www.youtube.com/watch?v=EFaTPLcV9nk&t=4s" target="_blank">AWS Lambda Data Storage: Choosing Between S3, EFS, and Local Storage - AWS Online Tech Talks</a></li>
+        <li><a href="https://awslabs.github.io/aws-lambda-powertools-python/" target="_blank">Lambda Powertools Python Homepage</a></li>
+    </ul>
+    <h2>Module 8: Step Functions for orchestration</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/step-functions/?step-functions.sort-by=item.additionalFields.postDateTime&step-functions.sort-order=desc" target="_blank">AWS Step Functions</a></li>
+        <li><a href="https://aws.amazon.com/step-functions/resources/?step-functions.sort-by=item.additionalFields.postDateTime&step-functions.sort-order=desc" target="_blank">AWS Step Functions Resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">What is AWS Step Functions?</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-states.html" target="_blank">AWS Step Functions States</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html" target="_blank">Error handling in Step Functions</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-intrinsic-functions.html" target="_blank">AWS Step Functions Intrinsic functions</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-invoke-sfn.html" target="_blank">Invoke AWS Step Functions from other services</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-service-integrations.html" target="_blank">Using AWS Step Functions with other services</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-xray-tracing.html" target="_blank">AWS X-Ray and Step Functions</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-sam-sfn.html" target="_blank">AWS Step Functions and AWS SAM</a></li>
+        <li><a href="https://states-language.net/spec.html" target="_blank">Amazon States Language</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/services-stepfunctions.html" target="_blank">Orchestration examples with Step Functions</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/automating-scalable-business-workflows-using-minimal-code/" target="_blank">Automating scalable business workflows using minimal code</a></li>
+        <li><a href="https://aws.amazon.com/blogs/mt/actionable-insights-based-on-anomaly-detection-in-aws-x-ray/" target="_blank">Simplifying application orchestration with AWS Step Functions and AWS SAM</a></li>
+        <li><a href="https://www.youtube.com/watch?v=1RJtCKpdELQ&list=PLJo-rJlep0EBq0-P-2wq5tzTXjL_jmynX" target="_blank">AWS Step Functions: Support in the AWS Toolkit for Visual Studio Code</a></li>
+        <li><a href="https://github.com/aws-samples/aws-step-functions-twitch-series" target="_blank">AWS Step Functions Twitch Series</a></li>
+    </ul>
+    <h2>Module 9: Observability and Monitoring</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/cloudwatch/" target="_blank">Amazon CloudWatch</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html" target="_blank">What Is Amazon CloudWatch Logs?</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html" target="_blank">Analyzing Log Data with CloudWatch Logs Insights</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html" target="_blank">Accessing Amazon CloudWatch logs for AWS Lambda</a></li>
+        <li><a href="https://aws.amazon.com/xray/" target="_blank">AWS X-Ray</a></li>
+        <li><a href="https://aws.amazon.com/api-gateway/resources/" target="_blank">Amazon API Gateway Resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html" target="_blank">What is AWS X-Ray?</a></li>
+        <li><a href="https://docs.aws.amazon.com/xray/latest/devguide/xray-services.html" target="_blank">Integrating AWS X-Ray with other AWS services</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html" target="_blank">Using AWS Lambda with AWS X-Ray</a></li>
+        <li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-xray.html" target="_blank">Tracing user requests to REST APIs using X-Ray</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html" target="_blank">Using Amazon CloudWatch Metrics</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics.html" target="_blank">Working with AWS Lambda function metrics</a></li>
+        <li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html" target="_blank">Amazon API Gateway dimensions and metrics</a></li>
+        <li><a href="https://docs.aws.amazon.com/sns/latest/dg/sns-monitoring-using-cloudwatch.html" target="_blank">Monitoring Amazon SNS topics using CloudWatch</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-available-cloudwatch-metrics.html" target="_blank">Available CloudWatch metrics for Amazon SQS</a></li>
+        <li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/metrics-dimensions.html" target="_blank">DynamoDB Metrics and Dimensions</a></li>
+        <li><a href="https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cw-metrics.html" target="_blank">Monitoring Step Functions Using CloudWatch</a></li>
+        <li><a href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html" target="_blank">Monitoring the Amazon Kinesis Data Streams Service with Amazon CloudWatch</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html" target="_blank">Using Amazon CloudWatch Alarms</a></li>
+        <li><a href="https://aws.amazon.com/blogs/aws/new-use-cloudwatch-synthetics-to-monitor-sites-api-endpoints-web-workflows-and-more/" target="_blank">New – Use CloudWatch Synthetics to Monitor Sites, API Endpoints, Web Workflows, and More</a></li>
+        <li><a href="https://aws.amazon.com/blogs/mt/how-to-set-up-cloudwatch-anomaly-detection-to-set-dynamic-alarms-automate-actions-and-drive-online-sales/" target="_blank">How to set up CloudWatch Anomaly Detection to set dynamic alarms, automate actions, and drive online sales</a></li>
+        <li><a href="https://aws.amazon.com/blogs/mt/actionable-insights-based-on-anomaly-detection-in-aws-x-ray/" target="_blank">Actionable Insights based on anomaly detection in AWS X-Ray</a></li>
+        <li><a href="https://aws.amazon.com/blogs/opensource/simplifying-serverless-best-practices-with-lambda-powertools/" target="_blank">Simplifying serverless best practices with Lambda Powertools</a></li>
+        <li><a href="https://pages.awscloud.com/Monitoring-Serverless-Applications-Using-CloudWatch-ServiceLens_2020_0309-MGT_OD.html" target="_blank">Monitoring Serverless Applications Using CloudWatch ServiceLens</a></li>
+        <li><a href="https://github.com/awslabs/aws-embedded-metrics-node#usage" target="_blank">AWS Embedded Metrics</a></li>
+        <li><a href="https://awslabs.github.io/aws-lambda-powertools-python/core/logger/" target="_blank">Lambda Powertools Python Logger</a></li>
+    </ul>
+    <br>
+    </p>
+
+</body>
+
+</html>

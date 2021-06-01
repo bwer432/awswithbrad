@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/norm_profile.ico" type="Norm's icon" />
+    <title>Developing Serverless Solutions on AWS Day 1</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                                &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dev/dev.html">Developing on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dev/dev.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dss/dss.html">Developing Serverless Solutions on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dss/dss.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="../seceng/seceng_mgmt.html">Running Containers on Amazon Elastic Kubernetes Service &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks.html">Overview</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks_day1.html">Day 1</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks_day2.html">Day 2</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../eks/eks_day3.html">Day 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Security Engineering on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../seceng/seceng_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../seceng/seceng_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin"
+                        target="_blank">Course Materials</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS
+                        Qwiklabs</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS
+                        Console</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/"
+                        target="_blank">AWS Certifications</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="mailto:normakea@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+    </nav>
+
+    <!-- Main Body -->
+
+    <p>
+        <h1>Developing Serverless Solutions on AWS</h1><h1>Day 1</h1>
+    <table>
+        <tr>
+            <th><b>Module/Lab</b></th>
+            <th><b>Time Estimate</b></th>
+        </tr>
+        <tr>
+            <td>Module 0: Welcome and introduction</td>
+            <td>9:00 AM - 9:30 AM</td>
+        </tr>
+        <tr>
+            <td>Module 1: Thinking serverless</td>
+            <td>9:30 AM - 10:00 AM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>10 Minutes</td>
+        </tr>
+        <tr>
+            <td>Module 2: API-driven development and synchronous event sources</td>
+            <td>10:10 AM - 10:50 AM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>10 Minutes</td>
+        </tr>
+        <tr>
+            <td>Module 3: Introduction to Authentication, Authorization, and Access Control</td>
+            <td>11:00 AM - 11:15 AM</td>
+        </tr>
+        <tr>
+            <td>Module 4: Serverless Deployment Frameworks</td>
+            <td>11:15 AM - 11:45 AM</td>
+        </tr>
+        <tr>
+            <td><b>Lunch</b></td>
+            <td>11:45 AM - 12:45 PM</td>
+        </tr>
+        <tr>
+            <td>Lab 1: Deploying a Simple Serverless Application</td>
+            <td>12:45 PM - 1:45 PM</td>
+        </tr>
+        <tr>
+            <td>Module 5:Using Amazon EventBridge and Amazon SNS to decouple components</td>
+            <td>1:45 PM - 2:45 PM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>15 Minutes</td>
+        </tr>
+        <tr>
+            <td>Module 6: Event-Driven Development Using Queues and Streams</td>
+            <td>3:00 PM - 3:30 PM</td>
+        </tr>
+        <tr>
+            <td>Lab 2: Message Fanout with Amazon EventBridge</td>
+            <td>3:30 PM - 4:30 PM</td>
+        </tr>
+    </table>
+    </p>
+    <p>
+    <h2>Resources</h2>
+    <p>The following resource links will provide more information and help reinforce topics covered during the Cloud
+    Practitioner Essentials course:</p>
+    <h2>Module 1: Thinking serverless</h2>
+    <ul>
+        <li><a href="https://github.com/aws-samples/designing-cloud-native-microservices-on-aws" target="_blank">Designing Cloud Native Microservices on AWS (via DDD/EventStormingWorkshop)</a></li>
+        <li><a href="https://aws.amazon.com/serverless/" target="_blank">Serverless on AWS</a></li>
+        <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/serverless-applications-lens/scenarios.html" target="_blank">Serverless Applications Lens Scenarios</a></li>
+        <li><a href="https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.publishedDate&customer-references-cards.sort-order=desc&customer-references-cards.q=serverless&customer-references-cards.q_operator=AND" target="_blank">AWS Customer Success</a></li>
+        <li><a href="https://www.youtube.com/watch?v=9IYpGTS7Jy0" target="_blank">AWS re:Invent 2019: Serverless architectural patterns and best practices</a></li>
+        <li><a href="https://github.com/aws-samples?q=lambda-refarch" target="_blank">AWS Samples</a></li>
+        <li><a href="https://github.com/aws-samples/aws-serverless-workshops" target="_blank">Wild Rydes Serverless Workshops</a></li>
+        <li><a href="https://github.com/aws-samples/aws-serverless-airline-booking" target="_blank">AWS Serverless Airline Booking</a></li>
+        <li><a href="https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/microservices-on-aws.html" target="_blank">Implementing Microservices on AWS</a></li>
+        <li><a href="https://www.dddcommunity.org/learning-ddd/" target="_blank">DDD Community</a></li>
+        <li><a href="https://www.youtube.com/watch?v=-pb-DkD6cWg" target="_blank">AWS re:Invent 2018: Databases on AWS: The Right Tool for the Right Job</a></li>
+        <li><a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/index.html" target="_blank">Enterprise Integration Patterns - Messaging Patterns Overview</a></li>
+        <li><a href="https://www.allthingsdistributed.com/2019/08/modern-applications-at-aws.html" target="_blank">Modern applications at AWS - All Things Distributed</a></li>
+        <li><a href="https://aws.amazon.com/blogs/architecture/introduction-to-messaging-for-modern-cloud-architecture/" target="_blank">Introduction to Messaging for Modern Cloud Architecture</a></li>
+    </ul>
+    <h2>Module 2: API-driven development and synchronous event sources</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html" target="_blank">Using AWS Lambda with other services</a></li>
+        <li><a href="https://aws.amazon.com/api-gateway/" target="_blank">Amazon API Gateway</a></li>
+        <li><a href="https://aws.amazon.com/api-gateway/resources/" target="_blank">Amazon API Gateway Resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html" target="_blank">What is Amazon API Gateway?</a></li>
+        <li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html" target="_blank">Choosing between HTTP APIs and REST APIs</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html" target="_blank">Using AWS Lambda with Amazon API Gateway</a></li>
+        <li><a href="https://aws.amazon.com/appsync/" target="_blank">AWS AppSync</a></li>
+        <li><a href="https://aws.amazon.com/appsync/resources/" target="_blank">AWS AppSync resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/appsync/latest/devguide/what-is-appsync.html" target="_blank">What is AWS AppSync?</a></li>
+        <li><a href="https://docs.aws.amazon.com/appsync/latest/devguide/tutorials.html" target="_blank">AWS AppSync Resolver tutorials</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html" target="_blank">AWS Lambda Invoke</a></li>
+        <li><a href="https://aws.amazon.com/blogs/architecture/understanding-the-different-ways-to-invoke-lambda-functions/" target="_blank">Understanding the Different Ways to Invoke Lambda Functions</a></li>
+        <li><a href="https://www.youtube.com/watch?v=CEHC9crd2VU&list=PLhr1KZpdzukfphWGOWYOJSNhPe9PhM_1z" target="_blank">Building Happy Little APIs | E1 – I Didn’t Know Amazon API Gateway Did That</a></li>
+        <li><a href="https://www.youtube.com/watch?v=v38sMDANTT0&list=PLJo-rJlep0EAICLlFx213cJGjUPxHcxB5" target="_blank">Happy Little APIs (S2E0): Intro to Season 2</a></li>
+        <li><a href="https://aws.amazon.com/blogs/mobile/aws-appsync-offline-reference-architecture/" target="_blank">AWS AppSync offline reference architecture – powered by the Amplify DataStore</a></li>
+        <li><a href="https://aws.amazon.com/blogs/mobile/appsync-websockets-python/" target="_blank">Creating a Python WebSocket client for AWS AppSync real-time subscriptions</a></li>
+        <li><a href="https://www.youtube.com/watch?v=CwLB0BRwIqE" target="_blank">AWS re:Invent 2018: Ten Tips And Tricks for Improving Your GraphQL API with AWS AppSync</a></li>
+        <li><a href="https://www.youtube.com/watch?v=7aJItKmoeWo" target="_blank">AWS re:Invent 2019: Building modern APIs with GraphQL</a></li>
+    </ul>
+    <h2>Module 3: Introduction to Authentication, Authorization, and Access Control</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/cognito/" target="_blank">Amazon Cognito</a></li>
+        <li><a href="https://aws.amazon.com/cognito/dev-resources/" target="_blank">Amazon Cognito Developer Resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html" target="_blank">What Is Amazon Cognito?</a></li>
+        <li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html" target="_blank">Control access to a REST API using Amazon Cognito user pools as authorizer</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/secure-api-access-with-amazon-cognito-federated-identities-amazon-cognito-user-pools-and-amazon-api-gateway/" target="_blank">Secure API Access with Amazon Cognito Federated Identities, Amazon Cognito User Pools, and Amazon API Gateway</a></li>
+        <li><a href="https://aws.amazon.com/blogs/mobile/how-to-use-cognito-pre-token-generators-to-customize-claims-in-id-tokens/" target="_blank">How to Use Cognito Pre-Token Generation trigger to Customize Claims In ID Tokens</a></li>
+        <li><a href="https://aws.amazon.com/blogs/media/enabling-video-chats-using-amazon-kinesis-video-streams-for-webrtc/" target="_blank">Enabling video chats using Amazon Kinesis Video Streams for WebRTC</a></li>
+    </ul>
+    <h2>Module 4: Serverless Deployment Frameworks</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/cloudformation/" target="_blank">AWS Cloud​Formation</a></li>
+        <li><a href="https://aws.amazon.com/cloudformation/resources/" target="_blank">AWS CloudFormation Resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html" target="_blank">What is AWS CloudFormation?</a></li>
+        <li><a href="https://aws.amazon.com/cdk/" target="_blank">AWS Cloud Development Kit</a></li>
+        <li><a href="https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html" target="_blank">Getting started with the AWS CDK</a></li>
+        <li><a href="https://docs.aws.amazon.com/cdk/api/latest/docs/aws-construct-library.html" target="_blank">AWS CDK API Reference</a></li>
+        <li><a href="https://aws.amazon.com/serverless/sam/" target="_blank">AWS Serverless Application Model</a></li>
+        <li><a href="https://github.com/aws/serverless-application-model" target="_blank">AWS Serverless Application Model (AWS SAM)</a></li>
+        <li><a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html" target="_blank">What is the AWS Serverless Application Model (AWS SAM)?</a></li>
+        <li><a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-command-reference.html" target="_blank">AWS SAM CLI command reference</a></li>
+        <li><a href="https://aws.amazon.com/amplify/" target="_blank">AWS Amplify</a></li>
+        <li><a href="https://docs.amplify.aws/start" target="_blank">AWS Aplify Getting started</a></li>
+        <li><a href="https://amplify.aws/community/" target="_blank">Welcome to the Amplify Community</a></li>
+        <li><a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html" target="_blank">Welcome to the AWS Amplify Console</a></li>
+        <li><a href="https://www.youtube.com/watch?v=bJHHQM7GGro" target="_blank">AWS re:Invent 2019: Best practices for authoring AWS CloudFormation</a></li>
+        <li><a href="https://www.youtube.com/watch?v=9As_ZIjUGmY&t=1s" target="_blank">AWS re:Invent 2019: Deep dive into AWS Cloud Development Kit</a></li>
+        <li><a href="https://cdkworkshop.com/" target="_blank">AWS CDK Intro Workshop</a></li>
+        <li><a href="https://www.youtube.com/watch?v=K3hLlHNCjbQ" target="_blank">AWS re:Invent 2019: Speed up native mobile development with AWS Amplify</a></li>
+        <li><a href="https://www.youtube.com/watch?v=DcrtvgaVdCU" target="_blank">AWS re:Invent 2019: Production-grade full-stack apps with AWS Amplify</a></li>
+    </ul>
+    <h2>Module 5: Using Amazon EventBridge and Amazon SNS to decouple components</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html" target="_blank">Using AWS Lambda with other services</a></li>
+        <li><a href="https://aws.amazon.com/eventbridge/" target="_blank">Amazon EventBridge</a></li>
+        <li><a href="https://aws.amazon.com/eventbridge/resources/" target="_blank">Amazon EventBridge resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html" target="_blank">What Is Amazon EventBridge?</a></li>
+        <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html" target="_blank">Events from AWS services</a></li>
+        <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-get-started.html" target="_blank">Get started with Amazon EventBridge</a></li>
+        <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-events.html" target="_blank">Amazon EventBridge events</a></li>
+        <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns-content-based-filtering.html" target="_blank">Content-based filtering in Amazon EventBridge event patterns</a></li>
+        <li><a href="https://aws.amazon.com/eventbridge/integrations/" target="_blank">Amazon EventBridge integrations</a></li>
+        <li><a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas.html#eb-supported-integrations" target="_blank">Amazon EventBridge Supported SaaS partner integrations</a></li>
+        <li><a href="https://www.youtube.com/watch?v=-Nv-Gejpkhc&list=PLVwkQNu5xWCRGueGLySaAHucRrKY-w2Jt" target="_blank">How To Set Up A Custom Event Bus With Amazon EventBridge</a></li>
+        <li><a href="https://aws.amazon.com/sns/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc" target="_blank">Amazon Simple Notification Service</a></li>
+        <li><a href="https://aws.amazon.com/sns/resources/" target="_blank">Amazon SNS resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html" target="_blank">What is Amazon SNS?</a></li>
+        <li><a href="https://docs.aws.amazon.com/sns/latest/dg/sns-message-delivery-retries.html" target="_blank">Amazon SNS message delivery retries</a></li>
+        <li><a href="https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html" target="_blank">Amazon SNS message filtering</a></li>
+        <li><a href="https://docs.aws.amazon.com/sns/latest/dg/sns-lambda-as-subscriber.html" target="_blank">Fanout to Lambda functions</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sns.html" target="_blank">Using Lambda with Amazon SNS</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html" target="_blank">AWS Lambda Asynchronous invocation</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html" target="_blank">AWS Lambda Invoke</a></li>
+        <li><a href="https://aws.amazon.com/blogs/architecture/understanding-the-different-ways-to-invoke-lambda-functions/" target="_blank">Understanding the Different Ways to Invoke Lambda Functions</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/choosing-between-messaging-services-for-serverless-applications/" target="_blank">Choosing between messaging services for serverless applications</a></li>
+        <li><a href="https://www.youtube.com/watch?v=28B4L1fnnGM" target="_blank">Deep Dive on Amazon EventBridge - AWS Online Tech Talks</a></li>
+        <li><a href="https://www.youtube.com/watch?v=jYmZH7j_MXA&t=1s" target="_blank">App 2025 Episode 1: Amazon EventBridge as the backbone of your app</a></li>
+        <li><a href="https://aws.amazon.com/blogs/compute/enriching-event-driven-architectures-with-aws-event-fork-pipelines/" target="_blank">Enriching Event-Driven Architectures with AWS Event Fork Pipelines</a></li>
+        <li><a href="https://www.youtube.com/watch?v=odcAq5vV6II" target="_blank">Tim Bray and Friends | Messaging Fanout for Parallel Processing | Guest Expert: Sam Dengler</a></li>
+        <li><a href="https://www.youtube.com/watch?v=7i17szaOBg0" target="_blank">CSIRO: Using Serverless Computing to Help Genome Research</a></li>
+        <li><a href="https://www.youtube.com/watch?v=y0WJLXx5Ml0&t=1s" target="_blank">Building Event-Driven Serverless Apps with AWS Event Fork Pipelines - AWS Online Tech Talks</a></li>
+    </ul>
+    <h2>Module 6: Event-Driven Development Using Queues and Streams</h2>
+    <ul>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html" target="_blank">Using AWS Lambda with other services</a></li>
+        <li><a href="https://aws.amazon.com/sqs/" target="_blank">Amazon Simple Queue Service</a></li>
+        <li><a href="https://aws.amazon.com/sqs/resources/?amazon-simple-queue-service-sqs-resources-blog.sort-by=item.additionalFields.createdDate&amazon-simple-queue-service-sqs-resources-blog.sort-order=desc" target="_blank">Amazon SQS resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html" target="_blank">What is Amazon Simple Queue Service?</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-basic-architecture.html" target="_blank">Basic Amazon SQS architecture</a></li>
+        <li><a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-best-practices.html" target="_blank">Best practices for Amazon SQS</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html" target="_blank">Using AWS Lambda with Amazon SQS</a></li>
+        <li><a href="https://aws.amazon.com/kinesis/" target="_blank">Amazon Kinesis</a></li>
+        <li><a href="https://docs.aws.amazon.com/kinesis/index.html" target="_blank">Amazon Kinesis Video Streams</a></li>
+        <li><a href="https://docs.aws.amazon.com/streams/latest/dev/introduction.html" target="_blank">What Is Amazon Kinesis Data Streams?</a></li>
+        <li><a href="https://aws.amazon.com/dynamodb/resources/" target="_blank">Amazon DynamoDB resources</a></li>
+        <li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.Lambda.html" target="_blank">DynamoDB Streams and AWS Lambda Triggers</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html" target="_blank">Using AWS Lambda with Amazon Kinesis</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/services-kinesisfirehose.html" target="_blank">Using AWS Lambda with Amazon Kinesis Data Firehose</a></li>
+        <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html" target="_blank">Using AWS Lambda with Amazon DynamoDB</a></li>
+        <li><a href="https://aws.amazon.com/blogs/architecture/serverless-stream-based-processing-for-real-time-insights/" target="_blank">Serverless Stream-Based Processing for Real-Time Insights</a></li>
+        <li><a href="https://www.youtube.com/watch?v=d9Jb1WKCLd8" target="_blank">Choosing Events, Queues, Topics, and Streams in Your Serverless Application - AWS Online Tech Talks</a></li>
+        <li><a href="https://www.youtube.com/watch?v=2SGOyhwcbV4" target="_blank">AWS re:Invent 2019: Serverless stream processing pipeline best practices</a></li>
+        <li><a href="https://www.youtube.com/watch?v=2rikdPIFc_Q" target="_blank">AWS re:Invent 2019: Scalable serverless event-driven applications using Amazon SQS & Lambda</a></li>
+    </ul>
+    <br>
+    </p>
+
+</body>
+
+</html>
