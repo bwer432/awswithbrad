@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta property="twitter:title" content="AWS Global Cloud Infrastructure"/>
+    <meta property="twitter:description" content="The AWS Global infrastructure is built around Regions and Availability Zones (AZs). AWS Regions provide multiple, physically separated and isolated Availability Zones which are connected with low latency, high throughput, and highly redundant networking. "/>
+    <meta property="twitter:image" content="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_179x109.png"/>
+    <meta property="twitter:site" content="@awscloud"/>
+    <meta property="og:title" content="AWS Global Cloud Infrastructure"/>
+    <meta property="og:type" content="company"/>
+    <meta property="og:url" content="https://infrastructure.aws/"/>
+    <meta property="og:image" content="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"/>
+    <meta property="og:description" content="The AWS Global infrastructure is built around Regions and Availability Zones (AZs). AWS Regions provide multiple, physically separated and isolated Availability Zones which are connected with low latency, high throughput, and highly redundant networking. "/>
+    <meta property="og:site_name" content="Amazon Web Services, Inc."/>
+    <link rel="icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png"/>
+    <link type="text/css" rel="stylesheet" href="core/components_core.css"/>
+    <link type="text/css" rel="stylesheet" href="css/components.css"/>
+    <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+    <link type="text/css" rel="stylesheet" href="css/app.css"/>
+    <link type="text/css" rel="stylesheet" href="core/reselect.css"/>
+    <link type="text/css" rel="stylesheet" href="css/designer.css"/>
+    <link type="text/css" rel="stylesheet" href="core/editable.css"/>
+    <title>AWS Global Cloud Infrastructure</title>
+    <script src="js/conf.js" charset="utf-8"></script>
+    <script src="js/build.js" charset="utf-8"></script>
+    <script src="lepton.js" charset="utf-8"></script>
+    <script src="core/qrcode.js" charset="utf-8"></script>
+    <script src="core/ls.js" charset="utf-8"></script>
+    <script src="core/lang.js" charset="utf-8"></script>
+    <script src="core/touche-min.js" charset="utf-8"></script>
+    <script src="core/ios-drag-drop.js" charset="utf-8"></script>
+    <script src="core/helperfn.js" charset="utf-8"></script>
+    <script src="js/i18n_en.js" charset="utf-8"></script>
+    <script src="core/zepto.min.js" charset="utf-8"></script>
+    <script src="js/swipe.js" charset="utf-8"></script>
+    <script src="core/touchscroll.js" charset="utf-8"></script>
+    <script src="core/reselect.js" charset="utf-8"></script>
+    <script src="core/analytics.js" charset="utf-8"></script>
+    <script src="core/components_lib_v02.js" charset="utf-8"></script>
+    <script src="core/components_core_v02.js" charset="utf-8"></script>
+    <script src="core/architecture.js" charset="utf-8"></script>
+    <script src="location_data/location_data.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <!-- <script src="core/screensaver.js" charset="utf-8"></script> -->
+
+    <!-- content editing tool -->
+    <link type="text/css" rel="stylesheet" href="core/editable.css"/>
+    <script src="js/i18n_db_en.js" charset="utf-8"></script>
+    <!-- <script src="core/editable.js" charset="utf-8"></script> -->
+</head>
+
+<body class="bodyInit" style="visibility:hidden">
+    <div id="body">
+        <!--
+            <div class="aws_privacy" target="_blank"><a href="https://aws.amazon.com/privacy/">Learn more about AWS Privacy Policy</a></div>
+        -->
+        <a class="aws_privacy" target="_blank" href="https://aws.amazon.com/privacy/">Learn more about AWS Privacy Policy</a>
+        <div class="gradient_bg" data-track-view-show="discover"></div>
+        <div class="loading_cover"></div>
+        <div class="touch_prompt_knock"></div>
+
+        <div class="spline_edit_tools" data-view="edit_view">
+
+            <div class="spline_click_zone"></div>
+
+            <!-- Top row of buttons -->
+            <div class="projection_toggle">
+                <div class="projection_toggle_text ptt_globe" data-text="projection_globe"></div>
+                <div class="projection_toggle_text ptt_map ptt_on" data-text="projection_map"></div>
+            </div>
+            <div class="make_spline_button" data-text="Make spline"></div>
+            <div class="end_spline_button" data-text="End spline"></div>
+            <div class="spline_width_button" data-text="Spline Width"></div>
+            <div class="export_splines_button" data-text="Export splines"></div>
+            <div class="import_splines_button" data-text="Import splines"></div>
+            <div class="toggle_splines_button" data-text="Toggle current splines"></div>
+            <div class="toggle_older_splines_button" data-text="Toggle very old splines"></div>
+
+            <!-- Export clipboard -->
+            <div class="export_clipboard">
+                <textarea rows="30" cols="40"></textarea>
+            </div>
+
+            <!-- Bottom row of buttons -->
+            <div class="move_map_while_making_spline_button" data-text="Move map"></div>
+            <div class="zoom_in_button" data-text="Zoom In"></div>
+            <div class="zoom_out_button" data-text="Zoom Out"></div>
+        </div>
+
+        <!-- Hotspot container -->
+        <div class="hotspot_container" data-track-view-show="local_zones">
+
+            <!-- <div class="region_hotspot" data-hotspot="hs_region_0_stockholm">
+            			<div class="rh_line"></div>
+            			<div class="rh_box">
+            				<div class="rh_text">Stockholm</div>
+            			</div>
+            		</div>
+            		<div class="region_hotspot" data-hotspot="hs_region_1_frankfurt" data-js-view="discover,regions,frankfurt">
+            			<div class="rh_line"></div>
+            			<div class="rh_box">
+            				<div class="rh_text">Frankfurt</div>
+            			</div>
+            		</div> -->
+        </div>
+
+        <!-- Projection menu: Show everywhere but entry page -->
+        <div class="projection_menu" data-track-view-show="entry">
+            <div class="proj_type" data-text="projection_type"></div>
+            <div class="proj_button proj_globe selected"></div>
+            <div class="proj_button proj_map"></div>
+        </div>
+
+        <div class="page" data-view="entry">
+            <div class="page_container lower">
+                <div class="entry_title" data-text="entry_title"></div>
+                <div class="entry_button" data-js-view="discover,home" data-text="entry_button">
+                    <div class="button_echo"></div>
+                </div>
+                <div class="entry_body" data-text="entry_body"></div>
+            </div>
+            <div class="globe-clickable"></div>
+        </div>
+
+        <div class="page" data-view="discover">
+
+            <div class="instruction_box">
+                <div class="swipe_fingers"></div>
+                <div class="swipe_mouse"></div>
+                <div data-text="instruction_swipe"></div>
+                <div class="pinch_fingers"></div>
+                <div data-text="instruction_pinch"></div>
+                <div class="scroll_mouse"></div>
+                <div data-text="instruction_scroll"></div>
+            </div>
+
+            <div class="touch_prompt">
+                <div class="hand"></div>
+                <div data-text="touch_prompt"></div>
+            </div>
+
+            <!-- Key ("Legend") -->
+            <div class="key_container">
+                <div class="key_main_text" data-text="key"></div>
+                <div class="key_box">
+                    <div class="key_item">
+                        <div class="key_icon k_region"></div>
+                        <div class="key_text" data-text="region"></div>
+                    </div>
+                    <div class="key_item">
+                        <div class="key_icon k_region_coming_soon"></div>
+                        <div class="key_text" data-text="region_coming_soon"></div>
+                    </div>
+                    <div class="key_item">
+                        <div class="key_icon k_az"></div>
+                        <div class="key_text" data-text="az"></div>
+                    </div>
+                    <div class="key_item">
+                        <div class="key_icon k_lz"></div>
+                        <div class="key_text" data-text="lz"></div>
+                    </div>
+                    <div class="key_item">
+                        <div class="key_icon k_pop"></div>
+                        <div class="key_text" data-text="pop"></div>
+                    </div>
+                    <div class="key_item wider">
+                        <div class="key_icon k_network">
+                            <div class="k_net_circ"></div>
+                            <div class="k_net_circ"></div>
+                            <div class="k_net_circ"></div>
+                        </div>
+                        <div class="key_text" data-text="network"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subpage" data-view="home"></div>
+
+            <!-- Global Infrastructure -->
+            <div class="subpage" data-view="global_inf">
+                <div class="subpage_bg"></div>
+                <div class="subpage_container">
+                    <!-- <div class="global_inf_temp"></div> -->
+                    <div class="subpage_text_box">
+                        <div class="subpage_title" data-text="global_inf_title">
+                            <div class="share-state" data-text="share"></div>
+                        </div>
+                        <div class="subpage_bar"></div>
+                        <div class="subpage_body" data-text="global_inf_body"></div>
+                        <div class="subpage_instruction" data-text="global_inf_instruction"></div>
+                    </div>
+                    <div class="global_inf_box">
+                        <div class="g_labels"></div>
+                        <div class="g_map"></div>
+                        <div class="g_map_dot" data-js-view="discover,global_inf,region_g_inf">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="g_av_zone gaz1" data-js-view="discover,global_inf,av_zone">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="g_av_zone gaz2" data-js-view="discover,global_inf,av_zone">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="g_av_zone gaz3" data-js-view="discover,global_inf,av_zone">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="g_data_center gdc1" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc2" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc3" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc4" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc5" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc6" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc7" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc8" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_data_center gdc9" data-js-view="discover,global_inf,data_center">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_pop gp1" data-js-view="discover,global_inf,pop">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_pop gp2" data-js-view="discover,global_inf,pop">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_pop gp3" data-js-view="discover,global_inf,pop">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_pop gp4" data-js-view="discover,global_inf,pop">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_pop gp5" data-js-view="discover,global_inf,pop">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="g_computer"></div>
+                        <div class="g_person"></div>
+                        <div class="g_building"></div>
+                        <div class="g_lines">
+                            <img class="svg-replace" src="svg/global/global_infrastructure_lines.svg">
+                        </div>
+                    </div>
+                    <div class="side_text_box" data-view="region_g_inf">
+                        <div class="side_text_title" data-text="side_title_region_g_inf">
+                            <div class="close_text" data-js-view="discover,global_inf">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar orange"></div>
+                        <div class="side_text_body" data-text="side_body_region_g_inf"></div>
+                    </div>
+                    <div class="side_text_box" data-view="av_zone">
+                        <div class="side_text_title" data-text="side_title_av_zone">
+                            <div class="close_text" data-js-view="discover,global_inf">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar blue"></div>
+                        <div class="side_text_body" data-text="side_body_av_zone"></div>
+                    </div>
+                    <div class="side_text_box" data-view="data_center">
+                        <div class="side_text_title" data-text="side_title_data_center">
+                            <div class="close_text" data-js-view="discover,global_inf">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar white"></div>
+                        <div class="side_text_body" data-text="side_body_data_center"></div>
+                    </div>
+                    <div class="side_text_box" data-view="pop">
+                        <div class="side_text_title" data-text="side_title_pop">
+                            <div class="close_text" data-js-view="discover,global_inf">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar red"></div>
+                        <div class="side_text_body" data-text="side_body_pop"></div>
+                    </div>
+                    <div class="explore_button" data-js-view="discover,home" data-text="explore_the_globe">
+                        <div class="button_echo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Hardware -->
+            <div class="subpage" data-view="custom_hardware">
+                <div class="subpage_bg"></div>
+                <!-- <div class="custom_hardware_temp"></div> -->
+                <div class="subpage_container">
+                    <div class="subpage_text_box">
+                        <div class="subpage_title" data-text="custom_hardware_title">
+                            <div class="share-state" data-text="share"></div>
+                        </div>
+                        <div class="subpage_bar narrow"></div>
+                        <div class="subpage_body" data-text="custom_hardware_body"></div>
+                        <div class="subpage_instruction" data-text="custom_hardware_instruction"></div>
+                    </div>
+                    <div class="custom_hardware_box">
+                        <!--  -->
+                        <!-- svg containers -->
+                        <!-- lines -->
+                        <div class="ch_hardware_lines">
+                            <img class="svg-replace" src="svg/custom/hardware_lines.svg">
+                        </div>
+                        <div class="ch_internet_lines">
+                            <img class="svg-replace" src="svg/custom/internet_lines.svg">
+                        </div>
+                        <!-- label -->
+                        <div class="ch_labels"></div>
+                        <!-- elements -->
+                        <div class="ch_silicon">
+                            <div class="svg_piece silicon_outer">
+                                <img class="svg-replace" src="svg/custom/silicon_outer.svg">
+                            </div>
+                            <div class="svg_piece silicon_internal">
+                                <img class="svg-replace" src="svg/custom/silicon_internal.svg">
+                            </div>
+                        </div>
+                        <div class="ch_routers">
+                            <div class="svg_piece routers_outer">
+                                <img class="svg-replace" src="svg/custom/routers_outer.svg">
+                            </div>
+                            <div class="svg_piece routers_internal">
+                                <img class="svg-replace" src="svg/custom/routers_internal.svg">
+                            </div>
+                            <div class="svg_piece routers_internal_anim anim1">
+                                <img class="svg-replace" src="svg/custom/routers_internal_anim1.svg">
+                            </div>
+                            <div class="svg_piece routers_internal_anim anim2">
+                                <img class="svg-replace" src="svg/custom/routers_internal_anim2.svg">
+                            </div>
+                            <div class="svg_piece routers_internal_anim anim3">
+                                <img class="svg-replace" src="svg/custom/routers_internal_anim3.svg">
+                            </div>
+                        </div>
+                        <div class="ch_compute_servers">
+                            <div class="svg_piece compute_border">
+                                <img class="svg-replace" src="svg/custom/compute_border.svg">
+                            </div>
+                            <div class="svg_piece compute_internal">
+                                <img class="svg-replace" src="svg/custom/compute_internal.svg">
+                            </div>
+                            <div class="svg_piece compute_internal_anim anim1">
+                                <img class="svg-replace" src="svg/custom/compute_internal_anim1.svg">
+                            </div>
+                            <div class="svg_piece compute_internal_anim anim2">
+                                <img class="svg-replace" src="svg/custom/compute_internal_anim2.svg">
+                            </div>
+                            <div class="svg_piece compute_internal_anim anim3">
+                                <img class="svg-replace" src="svg/custom/compute_internal_anim3.svg">
+                            </div>
+                        </div>
+                        <div class="ch_storage_servers">
+                            <div class="svg_piece storage_base">
+                                <img class="svg-replace" src="svg/custom/storage.svg">
+                            </div>
+                            <div class="svg_piece storage_internal_anim anim1">
+                                <img class="svg-replace" src="svg/custom/storage_internal_anim1.svg">
+                            </div>
+                            <div class="svg_piece storage_internal_anim anim2">
+                                <img class="svg-replace" src="svg/custom/storage_internal_anim2.svg">
+                            </div>
+                            <div class="svg_piece storage_internal_anim anim3">
+                                <img class="svg-replace" src="svg/custom/storage_internal_anim3.svg">
+                            </div>
+                        </div>
+                        <div class="ch_load_balancers">
+                            <div class="svg_piece load_balancers_base">
+                                <img class="svg-replace" src="svg/custom/load_balancers.svg">
+                            </div>
+                            <div class="svg_piece load_balancers_internal_anim anim1">
+                                <img class="svg-replace" src="svg/custom/load_balancers_internal_anim1.svg">
+                            </div>
+                            <div class="svg_piece load_balancers_internal_anim anim2">
+                                <img class="svg-replace" src="svg/custom/load_balancers_internal_anim2.svg">
+                            </div>
+                            <div class="svg_piece load_balancers_internal_anim anim3">
+                                <img class="svg-replace" src="svg/custom/load_balancers_internal_anim3.svg">
+                            </div>
+                        </div>
+                        <div class="ch_internet">
+                            <div class="svg_piece internet_inner">
+                                <img class="svg-replace" src="svg/custom/the_internet_inner.svg">
+                            </div>
+                            <div class="svg_piece internet_outer">
+                                <img class="svg-replace" src="svg/custom/the_internet_outer.svg">
+                            </div>
+                        </div>
+                        <!-- buttons -->
+                        <div class="ch_button ch_silicon_button" data-track-view-show="silicon" data-js-view="discover,custom_hardware,silicon">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="ch_button ch_router_button" data-track-view-show="routers" data-js-view="discover,custom_hardware,routers">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="ch_button ch_compute_servers_button" data-track-view-show="compute_servers" data-js-view="discover,custom_hardware,compute_servers">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="ch_button ch_storage_servers_button" data-track-view-show="storage_servers" data-js-view="discover,custom_hardware,storage_servers">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="ch_button ch_load_balancers_button" data-track-view-show="load_balancers" data-js-view="discover,custom_hardware,load_balancers">
+                            <div class="circle"></div>
+                            <div class="pulse"></div>
+                        </div>
+                    </div>
+                    <div class="side_text_box" data-view="silicon" animate-in="slide left" animate-out="slide left">
+                        <div class="side_text_title" data-text="side_title_silicon">
+                            <div class="close_text" data-js-view="discover,custom_hardware">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar orange"></div>
+                        <div class="side_text_body" data-text="side_body_silicon"></div>
+                    </div>
+                    <div class="side_text_box" data-view="routers" animate-in="slide left" animate-out="slide left">
+                        <div class="side_text_title" data-text="side_title_routers">
+                            <div class="close_text" data-js-view="discover,custom_hardware">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar orange"></div>
+                        <div class="side_text_body" data-text="side_body_routers"></div>
+                    </div>
+                    <div class="side_text_box" data-view="compute_servers" animate-in="slide left" animate-out="slide left">
+                        <div class="side_text_title" data-text="side_title_compute_servers">
+                            <div class="close_text" data-js-view="discover,custom_hardware">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar orange"></div>
+                        <div class="side_text_body" data-text="side_body_compute_servers"></div>
+                    </div>
+                    <div class="side_text_box" data-view="storage_servers" animate-in="slide left" animate-out="slide left">
+                        <div class="side_text_title" data-text="side_title_storage_servers">
+                            <div class="close_text" data-js-view="discover,custom_hardware">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar orange"></div>
+                        <div class="side_text_body" data-text="side_body_storage_servers"></div>
+                    </div>
+                    <div class="side_text_box" data-view="load_balancers" animate-in="slide left" animate-out="slide left">
+                        <div class="side_text_title" data-text="side_title_load_balancers">
+                            <div class="close_text" data-js-view="discover,custom_hardware">
+                                <img class="svg-replace" src="icons/close_icon.svg">
+                            </div>
+                        </div>
+                        <div class="side_text_bar orange"></div>
+                        <div class="side_text_body" data-text="side_body_load_balancers"></div>
+                    </div>
+                    <div class="explore_button" data-js-view="discover,home" data-text="explore_the_globe">
+                        <div class="button_echo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="subpage" data-view="benefits">
+                <div class="subpage_bg"></div>
+                <div class="subpage_container">
+
+                    <!-- <div class="benefits_temp"></div> -->
+                    <!-- <div class="benefits_temp_2"></div> -->
+
+                    <div class="subpage_text_box">
+                        <div class="subpage_title" data-text="benefits_title">
+                            <div class="share-state" data-text="share"></div>
+                        </div>
+                        <div class="subpage_bar narrower"></div>
+                        <div class="subpage_instruction" data-text="benefits_instruction"></div>
+                        <!-- <div class="subpage_body" data-text="benefits_body"></div> -->
+                    </div>
+                    <div class="benefits_box">
+                        <div class="benefits_item b_security" data-js-view="discover,benefits,security" data-track-view-show="security">
+                            <div class="b_title" data-text="security"></div>
+                            <div class="b_svg_container">
+                                <div class="svg_piece circles">
+                                    <img class="svg-replace" src="svg/benefits/security_circles.svg">
+                                </div>
+                                <div class="svg_piece lock">
+                                    <img class="svg-replace" src="svg/benefits/security_lock.svg">
+                                </div>
+                                <div class="svg_piece wire">
+                                    <img class="svg-replace" src="svg/benefits/security_wire.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="benefits_item b_reliability" data-js-view="discover,benefits,reliability" data-track-view-show="reliability">
+                            <div class="b_title" data-text="reliability"></div>
+                            <div class="b_svg_container">
+                                <div class="svg_piece reliability_outer">
+                                    <img class="svg-replace" src="svg/benefits/reliability_outer.svg">
+                                </div>
+                                <div class="svg_piece reliability_check">
+                                    <img class="svg-replace" src="svg/benefits/reliability_check.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="benefits_item b_performance" data-js-view="discover,benefits,performance" data-track-view-show="performance">
+                            <div class="b_title" data-text="performance"></div>
+                            <div class="b_svg_container">
+                                <div class="svg_piece performance_outer">
+                                    <img class="svg-replace" src="svg/benefits/performance_outer.svg">
+                                </div>
+                                <div class="svg_piece performance_inner">
+                                    <img class="svg-replace" src="svg/benefits/performance_inner.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="benefits_item b_availability" data-js-view="discover,benefits,availability" data-track-view-show="availability">
+                        						<div class="b_title" data-text="availability"></div>
+                        						<div class="b_svg_container">
+                        							<div class="svg_piece availability_outer">
+                        								<img class="svg-replace" src="svg/benefits/availability_outer.svg">
+                        							</div>
+                        							<div class="svg_piece availability_inner">
+                        								<img class="svg-replace" src="svg/benefits/availability_inner.svg">
+                        							</div>
+                        						</div>
+                        					</div> -->
+                        <!-- <div class="benefits_item b_flexibility" data-js-view="discover,benefits,flexibility" data-track-view-show="flexibility">
+                        						<div class="b_title" data-text="flexibility"></div>
+                        						<div class="b_svg_container">
+                        							<div class="svg_piece flexibility_gear">
+                        								<img class="svg-replace" src="svg/benefits/flexibility_gear.svg">
+                        							</div>
+                        							<div class="svg_piece flexibility_lines_blue">
+                        								<img class="svg-replace" src="svg/benefits/flexibility_lines_blue.svg">
+                        							</div>
+                        							<div class="svg_piece flexibility_lines_white">
+                        								<img class="svg-replace" src="svg/benefits/flexibility_lines_white.svg">
+                        							</div>
+                        							<div class="svg_piece flexibility_circles">
+                        								<img class="svg-replace" src="svg/benefits/flexibility_circles.svg">
+                        							</div>
+                        						</div>
+                        					</div> -->
+                        <!-- <div class="benefits_item b_low_cost" data-js-view="discover,benefits,low_cost" data-track-view-show="low_cost">
+                        						<div class="b_title" data-text="low_cost"></div>
+                        						<div class="b_svg_container">
+                        							<div class="svg_piece low_cost_border">
+                        								<img class="svg-replace" src="svg/benefits/low_cost_border.svg">
+                        							</div> -->
+                        <!-- These pieces animate together -->
+                        <!-- <div class="switch_and_hand">
+                        								<div class="svg_piece low_cost_switch">
+                        									<img class="svg-replace" src="svg/benefits/low_cost_switch.svg">
+                        								</div>
+                        								<div class="svg_piece low_cost_hand">
+                        									<img class="svg-replace" src="svg/benefits/low_cost_hand.svg">
+                        								</div>
+                        							</div>
+                        						</div>
+                        					</div> -->
+                        <div class="benefits_item b_scalability" data-js-view="discover,benefits,scalability" data-track-view-show="scalability">
+                            <div class="b_title" data-text="scalability"></div>
+                            <div class="b_svg_container">
+                                <div class="svg_piece lines1">
+                                    <img class="svg-replace" src="svg/benefits/scalability_lines1.svg">
+                                </div>
+                                <div class="svg_piece lines2">
+                                    <img class="svg-replace" src="svg/benefits/scalability_lines2.svg">
+                                </div>
+                                <div class="svg_piece lines3">
+                                    <img class="svg-replace" src="svg/benefits/scalability_lines3.svg">
+                                </div>
+                                <div class="svg_piece lines4">
+                                    <img class="svg-replace" src="svg/benefits/scalability_lines4.svg">
+                                </div>
+                                <div class="full_rocket">
+                                    <div class="svg_piece rocket_bg">
+                                        <img class="svg-replace" src="svg/benefits/scalability_rocket.svg">
+                                    </div>
+                                    <div class="svg_piece rocket">
+                                        <img class="svg-replace" src="svg/benefits/scalability_rocket.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_text_box" data-view="performance" data-seq-num="3">
+                        <div class="close_text" data-js-view="discover,benefits">
+                            <img class="svg-replace" src="icons/close_icon.svg">
+                        </div>
+                        <div class="bottom_text_body" data-text="bottom_body_performance"></div>
+                    </div>
+                    <!-- <div class="bottom_text_box" data-view="availability" data-seq-num="2">
+                    					<div class="close_text" data-js-view="discover,benefits"><img class="svg-replace" src="icons/close_icon.svg"></div>
+                    					<div class="bottom_text_body" data-text="bottom_body_availability"></div>
+                    				</div> -->
+                    <!-- <div class="bottom_text_box" data-view="flexibility" data-seq-num="3">
+                    					<div class="close_text" data-js-view="discover,benefits"><img class="svg-replace" src="icons/close_icon.svg"></div>
+                    					<div class="bottom_text_body" data-text="bottom_body_flexibility"></div>
+                    				</div> -->
+                    <!-- <div class="bottom_text_box" data-view="low_cost" data-seq-num="4">
+                    					<div class="close_text" data-js-view="discover,benefits"><img class="svg-replace" src="icons/close_icon.svg"></div>
+                    					<div class="bottom_text_body" data-text="bottom_body_low_cost"></div>
+                    				</div> -->
+                    <div class="bottom_text_box" data-view="reliability" data-seq-num="2">
+                        <div class="close_text" data-js-view="discover,benefits">
+                            <img class="svg-replace" src="icons/close_icon.svg">
+                        </div>
+                        <div class="bottom_text_body" data-text="bottom_body_reliability"></div>
+                    </div>
+                    <div class="bottom_text_box" data-view="scalability" data-seq-num="4">
+                        <div class="close_text" data-js-view="discover,benefits">
+                            <img class="svg-replace" src="icons/close_icon.svg">
+                        </div>
+                        <div class="bottom_text_body" data-text="bottom_body_scalability"></div>
+                    </div>
+                    <div class="bottom_text_box" data-view="security" data-seq-num="1">
+                        <div class="close_text" data-js-view="discover,benefits">
+                            <img class="svg-replace" src="icons/close_icon.svg">
+                        </div>
+                        <div class="bottom_text_body" data-text="bottom_body_security"></div>
+                    </div>
+                    <div class="explore_button" data-js-view="discover,home" data-text="explore_the_globe">
+                        <div class="button_echo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Discover content -->
+            <div class="page_container left_align narrow cascade_slide_in">
+                <div class="discover_title" data-text="discover_title"></div>
+                <div class="discover_subtitle" data-text="how_we_do_it"></div>
+                <!-- Normal buttons -->
+                <!--<div class="discover_button darkgray" data-js-view="discover,home" data-track-view-show="home" data-text="home"><div class="button_echo"></div></div>-->
+                <div class="discover_button darkgray" data-js-view="discover,global_inf" data-track-view-show="global_inf" data-text="why_aws">
+                    <div class="button_echo"></div>
+                </div>
+                <!-- Buttons that go to a subpage, keeping the "discover" page open -->
+                <div class="discover_button has_subpage orange" data-js-view="discover,regions,overview" data-track-view-show="regions" data-text="num_regions">
+                    <div class="button_echo"></div>
+                </div>
+                <div class="discover_button has_subpage blue" data-js-view="discover,av_zones,tab_1" data-track-view-show="av_zones" data-text="num_av_zones">
+                    <div class="button_echo"></div>
+                </div>
+                <div class="discover_button has_subpage bluegreen" data-js-view="discover,local_zones" data-track-view-show="local_zones" data-text="local_zones">
+                    <div class="button_echo"></div>
+                </div>
+                <div class="discover_button has_subpage red" data-js-view="discover,pops" data-track-view-show="pops" data-text="num_pops">
+                    <div class="button_echo"></div>
+                </div>
+                <div class="discover_button has_subpage yellow" data-js-view="discover,stations" data-track-view-show="stations" data-text="ground_stations">
+                    <div class="button_echo"></div>
+                </div>
+                <div class="discover_button has_subpage lightgray" data-js-view="discover,fiber" data-track-view-show="fiber" data-text="fiber">
+                    <div class="button_echo"></div>
+                </div>
+                <!-- Normal buttons again -->
+                <div class="discover_button darkgray" data-js-view="discover,custom_hardware" data-track-view-show="custom_hardware" data-text="custom_hardware">
+                    <div class="button_echo"></div>
+                </div>
+                <div class="discover_button darkgray" data-js-view="discover,benefits" data-track-view-show="benefits" data-text="benefits">
+                    <div class="button_echo"></div>
+                </div>
+            </div>
+            <div class="discover_button share-state" data-text="share"></div>
+
+            <!-- Regions subcards (card for each region) -->
+            <div class="card_container shorter" data-view="regions">
+                <!-- Add all the subcards after this element -->
+                <div class="subcards_after"></div>
+            </div>
+
+            <!-- Main Regions card: "Overview" -->
+            <div class="card_container_container" data-view="regions">
+                <div class="card_container" data-view="overview">
+                    <div class="card_bg"></div>
+                    <div class="card_top_bar"></div>
+                    <div class="card_close_button" data-js-view="discover,home">
+                        <img class="svg-replace" src="icons/close_icon.svg">
+                    </div>
+                    <div class="card_normal_box">
+                        <div class="card_title" data-text="regions_card_title"></div>
+                        <div class="card_text">
+                            <div class="card_body" data-text="regions_card_body"></div>
+                            <!-- <div class="card_bullets" data-text="regions_card_bullets"></div> -->
+                            <div class="card_body" data-text="regions_card_footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability Zones card -->
+            <div class="card_container taller" data-view="av_zones">
+                <div class="card_bg"></div>
+                <div class="card_top_bar blue"></div>
+                <div class="card_close_button" data-js-view="discover,home">
+                    <img class="svg-replace" src="icons/close_icon.svg">
+                </div>
+                <div class="card_tab_options">
+                    <div class="card_tab_option go_tab1" data-text="av_zones" data-js-view="discover,av_zones,tab_1" data-track-view-show="tab_1"></div>
+                    <div class="card_tab_option_divider"></div>
+                    <div class="card_tab_option go_tab2" data-text="data_centers" data-js-view="discover,av_zones,tab_2,subtab_1" data-track-view-show="tab_2"></div>
+                </div>
+                <div class="card_tab_box tab1" data-view="tab_1" data-seq-num="1">
+                    <div class="card_image av_zone_card_image"></div>
+                    <div class="card_body" data-text="av_zones_card_body"></div>
+                    <!-- <div class="card_bullets" data-text="av_zones_card_bullets"></div> -->
+                </div>
+                <div class="card_tab_box tab2" data-view="tab_2" data-seq-num="2">
+                    <div class="card_image data_center_card_image no_bot_margin"></div>
+                    <div class="card_subtab_container">
+                        <div class="card_subtab_options">
+                            <div class="card_subtab_option cso_1 touchable no_before" data-js-view="discover,av_zones,tab_2,subtab_1" data-track-view-show="subtab_1">
+                                <div class="touchable_circle"></div>
+                            </div>
+                            <div class="card_subtab_option cso_2 touchable no_before" data-js-view="discover,av_zones,tab_2,subtab_2" data-track-view-show="subtab_2">
+                                <div class="touchable_circle"></div>
+                            </div>
+                            <div class="card_subtab_option cso_3 touchable no_before" data-js-view="discover,av_zones,tab_2,subtab_3" data-track-view-show="subtab_3">
+                                <div class="touchable_circle"></div>
+                            </div>
+                            <div class="card_subtab_option cso_4 touchable no_before" data-js-view="discover,av_zones,tab_2,subtab_4" data-track-view-show="subtab_4">
+                                <div class="touchable_circle"></div>
+                            </div>
+                            <div class="card_subtab_option cso_5 touchable no_before" data-js-view="discover,av_zones,tab_2,subtab_5" data-track-view-show="subtab_5">
+                                <div class="touchable_circle"></div>
+                            </div>
+                        </div>
+                        <div class="card_subtab_box" data-view="subtab_1" data-seq-num="1">
+                            <div class="card_title" data-text="data_center_card_title"></div>
+                            <div class="card_body" data-text="data_centers_card_body"></div>
+                        </div>
+                        <div class="card_subtab_box" data-view="subtab_2" data-seq-num="2">
+                            <div class="card_title" data-text="data_center_card_title_2"></div>
+                            <div class="card_body" data-text="data_centers_card_body_2"></div>
+                        </div>
+                        <div class="card_subtab_box" data-view="subtab_3" data-seq-num="3">
+                            <div class="card_title" data-text="data_center_card_title_3"></div>
+                            <div class="card_body" data-text="data_centers_card_body_3"></div>
+                        </div>
+                        <div class="card_subtab_box" data-view="subtab_4" data-seq-num="4">
+                            <div class="card_title" data-text="data_center_card_title_4"></div>
+                            <div class="card_body" data-text="data_centers_card_body_4"></div>
+                        </div>
+                        <div class="card_subtab_box" data-view="subtab_5" data-seq-num="5">
+                            <div class="card_title" data-text="data_center_card_title_5"></div>
+                            <div class="card_body" data-text="data_centers_card_body_5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pops card -->
+            <div class="card_container" data-view="pops">
+                <div class="card_bg"></div>
+                <div class="card_top_bar red"></div>
+                <div class="card_close_button" data-js-view="discover,home">
+                    <img class="svg-replace" src="icons/close_icon.svg">
+                </div>
+                <div class="card_normal_box">
+                    <div class="card_title" data-text="pops_card_title"></div>
+                    <div class="card_text">
+                        <div class="card_body" data-text="pops_card_body"></div>
+                        <!-- <div class="card_bullets" data-text="pops_card_bullets"></div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stations card -->
+            <div class="card_container" data-view="stations">
+                <div class="card_bg"></div>
+                <div class="card_top_bar yellow"></div>
+                <div class="card_close_button" data-js-view="discover,home">
+                    <img class="svg-replace" src="icons/close_icon.svg">
+                </div>
+                <div class="card_normal_box">
+                    <div class="card_title" data-text="stations_card_title"></div>
+                    <div class="card_text">
+                        <div class="card_body" data-text="stations_card_body"></div>
+                        <!-- <div class="card_bullets" data-text="pops_card_bullets"></div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Zones card -->
+            <div class="card_container" data-view="local_zones">
+                <div class="card_bg"></div>
+                <div class="card_top_bar bluegreen"></div>
+                <div class="card_close_button" data-js-view="discover,home">
+                    <img class="svg-replace" src="icons/close_icon.svg">
+                </div>
+                <div class="card_normal_box">
+                    <div class="card_title" data-text="local_zones_card_title"></div>
+                    <div class="card_text">
+                        <div class="card_body" data-text="local_zones_card_body"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fiber card -->
+            <div class="card_container" data-view="fiber">
+                <div class="card_bg"></div>
+                <div class="card_top_bar white"></div>
+                <div class="card_close_button" data-js-view="discover,home">
+                    <img class="svg-replace" src="icons/close_icon.svg">
+                </div>
+                <div class="card_normal_box">
+                    <div class="card_title" data-text="fiber_card_title"></div>
+                    <div class="card_text">
+                        <div class="card_body" data-text="fiber_card_body"></div>
+                        <div class="card_bullets" data-text="fiber_card_bullets"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Logo: Large on entry, normal size otherwise -->
+        <div class="aws_logo" data-track-view-show="entry"></div>
+
+    </div>
+</body>
+<!-- Copyright 2019 Kaon Interactive Inc., All Rights Reserved -->
+</html>
+
+
