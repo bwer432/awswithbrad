@@ -123,8 +123,8 @@ li {
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color: #0C9;
-	color:#FFF;
+	background-color: #ff9900;
+	color:#232f3e;
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
@@ -134,22 +134,22 @@ li {
 /*
  * Submenu - Buttons
  */
-ul {
+ul.floatitem {
 	position: fixed;
 	right: 40px;
 	padding-bottom: 10px;
 	bottom: 80px;
 	z-index: 100;
 }
-ul li {
+ul.floatitem li {
 	list-style: none;
 	margin-bottom: 10px;
 }
-ul li a {
+ul.floatitem li a {
   width: 60px;
 	height: 60px;
-	background-color: #F33;
-	color: #FFF;
+	background-color: #ff9900;
+	color: #232f3e;
 	border-radius: 50px;
 	text-align: center;
 	box-shadow: 2px 2px 3px #999;
@@ -164,7 +164,7 @@ a.float:hover + ul {
   visibility: visible;
   animation: scale-in 0.5s;
 }
-ul:hover {
+ul.floatitem:hover {
 	visibility: visible !important;
 }
 /* Center icons */
@@ -175,10 +175,10 @@ a i.icon {
 /*
  * Animations
  */
-a.float i{
+a.float i {
 	animation: rotate-in 0.5s;
 }
-a.float:hover > i{
+a.float:hover > i {
 	animation: rotate-out 0.5s;
 }
 @keyframes bot-to-top {
