@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="person-icon.png" type="image/png" />
+    <title>Developing on AWS Overview</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="dropdown-item" href="arch/arch.html">Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="arch/arch.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="arch/arch_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="arch/arch_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="arch/arch_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="advarc/advarc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="advarc/advarc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="advarc/advarc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="advarc/advarc_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="dev/dev.html">Developing on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="dev/dev.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="dev/dev_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="dev/dev_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="dev/dev_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="sysops/sysops.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="sysops/sysops_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="sysops/sysops_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="sysops/sysops_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo </a>
+                    <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="cpe/cpe.html">Overview</a></li>
+                        <li><a class="dropdown-item" href="cpe/cpe_day1.html">Day 1</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="tess/tess.html">AWS Technical Essentials &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="tess/tess.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="tess/tess_day1.html">Day 1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+                <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin"
+                        target="_blank">Course Materials</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS
+                        Qwiklabs</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS
+                        Console</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/"
+                        target="_blank">AWS Certifications</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="mailto:bradswer@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+    </nav>
+
+    <!-- Main Body -->
+
+    <p>
+    <h1>Developing on AWS </h1>
+    <h2 style="color: rgb(255, 0, 98);">Attendee Todo List</h2>
+
+    <p style="font-size: 20px">Good Morning, please use the same email address for the three tasks below. Make sure that
+        you use an email address that can be accessed from the location:</p>
+    <ol>
+        <li><strong>Register for course: </strong>locate the course event in your calendar (or in your inbox), and click
+            on the registration link. This is to ensure your training and certifications are captured.</li>
+        <li><strong>Register for the labs: </strong><a href="https://aws.qwiklabs.com/"
+                target="_blank">https://aws.qwiklabs.com</a>&nbsp;&nbsp;The classroom will be available after the first
+            break. </li>
+        <li><strong>Register for the course materials: </strong><a
+                href="https://evantage.gilmoreglobal.com/#/user/signin"
+                target="_blank">https://evantage.gilmoreglobal.com/#/user/signin</a>&nbsp;&nbsp;During the first break,
+            I will send you an email with a unique code for accessing the course materials. </li>
+    </ol>
+    </p>
+    <p>
+    <h2>Class Overview</h2>
+    </p>
+    <p style="font-size: 20px">
+        Developing on AWS helps developers understand how to use the AWS SDK to develop secure and scalable cloud applications. 
+        The course provides in-depth knowledge about how to interact with AWS using code and covers key concepts, best practices, 
+        and troubleshooting tips. 
+    </p>
+
+    <p>
+    <h2>Course Objectives</h2>
+    </p>
+    <p style="font-size: 20px">
+        At the end of this course, you will be able to: 
+    <ul>
+        <li>Set up the AWS SDK and developer credentials for Java, C#/.NET, Python, and JavaScript. </li>
+        <li>Use the AWS SDK to interact with AWS services and develop solutions. </li>
+        <li>Use Amazon Simple Storage Service (Amazon S3) and Amazon DynamoDB as data stores.</li>
+        <li>Integrate applications and data by using Amazon Kinesis, AWS Lambda, Amazon Simple Queue Service (Amazon SQS), Amazon Simple Notification Service (Amazon SNS), and AWS Step Functions.</li>
+        <li>Use AWS Identity and Access Management (IAM) for service authentication.</li>
+        <li>Use Amazon Cognito to create an Amazon Cognito identity pool and associate an IAM role with restricted permissions. </li>
+        <li>Use Amazon ElastiCache and Amazon CloudFront to improve application scalability. </li>
+        <li>Deploy applications by using AWS CloudFormation and AWS Elastic Beanstalk.</li>
+    </ul>
+    </p>
+
+    <p>
+    <h2>Lab Navigator</h2>
+    </p>
+
+    <table>
+        <tr>
+            <th><b>Module</b></th>
+            <th><b>Time Estimate (minutes)</b></th>
+            <th><b>Lab Title</b></th>
+            <th><b>C&sharp; .NET page</b></th>
+            <th><b>Java page</b></th>
+            <th><b>Python page</b></th>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>30</td>
+            <td>Lab 1 - Ready, Set, Go!</td>
+            <td>4</td>
+            <td>17</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>60</td>
+            <td>Lab 2 - Developing Storage Solutions with Amazon S3</td>
+            <td>47</td>
+            <td>61</td>
+            <td>75</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>60</td>
+            <td>Lab 3 - Developing Flexible NoSQL Solutions with Amazon DynamoDB</td>
+            <td>93</td>
+            <td>105</td>
+            <td>118</td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>45</td>
+            <td>Lab 4 - Developing Event-Driven Solutions with AWS Lambda</td>
+            <td>136</td>
+            <td>150</td>
+            <td>165</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>45</td>
+            <td>Lab 5 - Developing Messaging Solutions with Amazon SNS and Amazon SQS</td>
+            <td>186</td>
+            <td>204</td>
+            <td>221</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>120</td>
+            <td>Lab 6 - Developing an end to end Application with AWS</td>
+            <td>244</td>
+            <td>285</td>
+            <td>328</td>
+        </tr>
+    </table>
+
+    <div class="lab">
+        <h2>Lab 1 - Ready, Set, Go!</h2>
+        <p>This lab will require around 30 minutes to complete.</p>
+        <br/>
+        <p>Instructions:</p>
+        <ul>
+            <li>C# page 4</li>
+            <li>Java page 17</li>
+            <li>Python page 30</li>
+        </ul>
+        <br/>
+        <p>Objectives:</p>
+        <ul>
+            <li>Set up your AWS developer credentials</li>
+            <li>Describe key aspects relating to using the AWS SDK.</li>
+            <li>Create an IAM policy.</li>
+            <li>Create an IAM role.</li>
+            <li>Assign a policy to a role.</li>
+        </ul>
+    </div>
+
+    <div class="lab">
+        <h2>Lab 2 - Developing Storage Solutions with Amazon S3</h2>
+        <p>This lab will require around 60 minutes to complete.</p>
+        <br/>
+        <p>Instructions:</p>
+        <ul>
+            <li>C# page 47</li>
+            <li>Java page 61</li>
+            <li>Python page 75</li>
+        </ul>
+        <br/>
+        <p>Objectives:</p>
+        <ul>
+            <li>Create an S3 bucket and manage its properties.</li>
+            <li>Retrieve objects from an S3 bucket.</li>
+            <li>Upload objects to an S3 bucket.</li> 
+            <li>Use pre-signed URLs to restrict access.</li> 
+            <li>Request server-side encrytion when uploading objects.</li> 
+            <li>Add user metadata to objects.</li> 
+        </ul>
+    </div>
+
+    <div class="lab">
+        <h2>Lab 3 - Developing Flexible NoSQL Solutions with Amazon DynamoDB</h2>
+        <p>This lab will require around 60 minutes to complete.</p>
+        <br/>
+        <p>Instructions:</p>
+        <ul>
+            <li>C# page 93</li>
+            <li>Java page 105</li>
+            <li>Python page 118</li>
+        </ul>
+        <br/>
+        <p>Objectives:</p>
+        <ul>
+            <li>Create a table and global secondary index.</li>
+            <li>Add items to a table.</li>
+            <li>Update items by adding additional properties.</li>
+            <li>Query data by using the table's global secondary index.</li>
+        </ul>
+    </div>
+
+    <div class="lab">
+        <h2>Lab 4 - Developing Event-Driven Solutions with AWS Lambda</h2>
+        <p>This lab will require around 45 minutes to complete.</p>
+        <br/>
+        <p>Instructions:</p>
+        <ul>
+            <li>C# page 136</li>
+            <li>Java page 150</li>
+            <li>Python page 165</li>
+        </ul>
+        <br/>
+        <p>Objectives:</p>
+        <ul>
+            <li>Create an Amazon IAM Lambda Execution Role.</li>
+            <li>Create an AWS Lambda function.</li>
+            <li>Configure AWS Lambda function event sources.</li>
+            <li>Monitor a Lambda function using Amazon CloudWatch Logs.</li>
+            <li>Retrieve objects from an Amazon S3 bucket.</li>
+        </ul>
+    </div>
+
+    <div class="lab">
+        <h2>Lab 5 - Developing Messaging Solutions with Amazon SNS and Amazon SQS</h2>
+        <p>This lab will require around 45 minutes to complete.</p>
+        <br/>
+        <p>Instructions:</p>
+        <ul>
+            <li>C# page 186</li>
+            <li>Java page 204</li>
+            <li>Python page 221</li>
+        </ul>
+        <br/>
+        <p>Objectives:</p>
+        <ul>
+            <li>Set up an SNS topic.</li>
+            <li>Publish messages to an SNS topic.</li>
+            <li>Send email messages to subscribers of an SNS topic.</li>
+            <li>Send raw messages to subscribers of an SNS topic.</li>
+            <li>Set up an SQS queue.</li>
+            <li>Receive messages from an SQS queue.</li>
+            <li>Delete messages from an SQS queue.</li>
+        </ul>
+    </div>
+
+    <div class="lab">
+        <h2>Lab 6 - Developing an end to end Application with AWS</h2>
+        <p>This lab will require around 120 minutes to complete.</p>
+        <br/>
+        <p>Instructions:</p>
+        <ul>
+            <li>C# page 244</li>
+            <li>Java page 285</li>
+            <li>Python page 328</li>
+        </ul>
+        <br/>
+        <p>Objectives:</p>
+        <ul>
+            <li>Host a Static Website in an S3 bucket.</li>
+            <li>Create an IAM Policy and Role to give specific access to Lambda.</li>
+            <li>Crate an Amazon Cognito User Pool to authenticate users and control access to API Gateway.</li>
+            <li>Create Lambda functions to perform CRUD operations on a DynamoDB table.</li>
+            <li>Create a Restful API on API Gateway to front Lambda functions.</li>
+            <li>Access to Polly service through API.</li>
+        </ul>
+    </div>
+</body>
+
+</html>
