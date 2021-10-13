@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="person-icon.png" type="image/png" />
-    <title>Developing on AWS Overview</title>
+    <title>Advanced Developing on AWS Overview</title>
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -97,7 +97,7 @@
     <!-- Main Body -->
 
     <p>
-    <h1>Developing on AWS </h1>
+    <h1>Advanced Developing on AWS </h1>
     <h2 style="color: rgb(255, 0, 98);">Attendee Todo List</h2>
 
     <p style="font-size: 20px">Good Morning, please use the same email address for the three tasks below. Make sure that
@@ -118,9 +118,14 @@
     <h2>Class Overview</h2>
     </p>
     <p style="font-size: 20px">
-        Developing on AWS helps developers understand how to use the AWS SDK to develop secure and scalable cloud applications. 
-        The course provides in-depth knowledge about how to interact with AWS using code and covers key concepts, best practices, 
-        and troubleshooting tips. 
+	Advanced Developing on AWS uses the real-world scenario of taking 
+	a legacy, monolithic on-premises application and refactoring it 
+	into a serverless microservices architecture. 
+	The course covers advanced development topics such as 
+	architecting for a cloud-native environment; 
+	deconstructing on-premises, legacy applications and 
+	repackaging them into cloud-based, cloud-native architectures; 
+	and applying the tenets of the twelve-factor app methodology.
     </p>
 
     <p>
@@ -129,210 +134,17 @@
     <p style="font-size: 20px">
         At the end of this course, you will be able to: 
     <ul>
-        <li>Set up the AWS SDK and developer credentials for Java, C#/.NET, Python, and JavaScript. </li>
-        <li>Use the AWS SDK to interact with AWS services and develop solutions. </li>
-        <li>Use Amazon Simple Storage Service (Amazon S3) and Amazon DynamoDB as data stores.</li>
-        <li>Integrate applications and data by using Amazon Kinesis, AWS Lambda, Amazon Simple Queue Service (Amazon SQS), Amazon Simple Notification Service (Amazon SNS), and AWS Step Functions.</li>
-        <li>Use AWS Identity and Access Management (IAM) for service authentication.</li>
-        <li>Use Amazon Cognito to create an Amazon Cognito identity pool and associate an IAM role with restricted permissions. </li>
-        <li>Use Amazon ElastiCache and Amazon CloudFront to improve application scalability. </li>
-        <li>Deploy applications by using AWS CloudFormation and AWS Elastic Beanstalk.</li>
+	<li>Analyze a monolithic application architecture to determine logical or programmatic break points where the application can be broken up across different AWS services</li>
+	<li>Apply twelve-factor app methodology concepts and steps while migrating from a monolithic architecture</li>
+	<li>Recommend the appropriate AWS services to develop a micro-services based, cloud-native application</li>
+	<li>Use the AWS API, AWS command line interface (AWS CLI), and SDKs to monitor and manage AWS services</li>
+	<li>Migrate a monolithic application to a microservices application using the 6 Rs of migration</li>
+	<li>Explain the SysOps and DevOps inter-dependencies that are necessary to deploy a microservices application in AWS</li>
     </ul>
     </p>
 
     <p>
-    <h2>Lab Navigator</h2>
-    </p>
 
-    <table>
-        <tr>
-            <th><b>Module</b></th>
-            <th><b>Time Estimate (minutes)</b></th>
-            <th><b>Lab Title</b></th>
-            <th><b>C&sharp; .NET page</b></th>
-            <th><b>Java page</b></th>
-            <th><b>Python page</b></th>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>30</td>
-            <td>Lab 1 - Ready, Set, Go!</td>
-            <td>4</td>
-            <td>17</td>
-            <td>30</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>60</td>
-            <td>Lab 2 - Developing Storage Solutions with Amazon S3</td>
-            <td>47</td>
-            <td>61</td>
-            <td>75</td>
-        </tr>
-
-        <tr>
-            <td>6</td>
-            <td>60</td>
-            <td>Lab 3 - Developing Flexible NoSQL Solutions with Amazon DynamoDB</td>
-            <td>93</td>
-            <td>105</td>
-            <td>118</td>
-        </tr>
-
-        <tr>
-            <td>8</td>
-            <td>45</td>
-            <td>Lab 4 - Developing Event-Driven Solutions with AWS Lambda</td>
-            <td>136</td>
-            <td>150</td>
-            <td>165</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>45</td>
-            <td>Lab 5 - Developing Messaging Solutions with Amazon SNS and Amazon SQS</td>
-            <td>186</td>
-            <td>204</td>
-            <td>221</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>120</td>
-            <td>Lab 6 - Developing an end to end Application with AWS</td>
-            <td>244</td>
-            <td>285</td>
-            <td>328</td>
-        </tr>
-    </table>
-
-    <div class="lab">
-        <h2>Lab 1 - Ready, Set, Go!</h2>
-        <p>This lab will require around 30 minutes to complete.</p>
-        <br/>
-        <p>Instructions:</p>
-        <ul>
-            <li>C# page 4</li>
-            <li>Java page 17</li>
-            <li>Python page 30</li>
-        </ul>
-        <br/>
-        <p>Objectives:</p>
-        <ul>
-            <li>Set up your AWS developer credentials</li>
-            <li>Describe key aspects relating to using the AWS SDK.</li>
-            <li>Create an IAM policy.</li>
-            <li>Create an IAM role.</li>
-            <li>Assign a policy to a role.</li>
-        </ul>
-    </div>
-
-    <div class="lab">
-        <h2>Lab 2 - Developing Storage Solutions with Amazon S3</h2>
-        <p>This lab will require around 60 minutes to complete.</p>
-        <br/>
-        <p>Instructions:</p>
-        <ul>
-            <li>C# page 47</li>
-            <li>Java page 61</li>
-            <li>Python page 75</li>
-        </ul>
-        <br/>
-        <p>Objectives:</p>
-        <ul>
-            <li>Create an S3 bucket and manage its properties.</li>
-            <li>Retrieve objects from an S3 bucket.</li>
-            <li>Upload objects to an S3 bucket.</li> 
-            <li>Use pre-signed URLs to restrict access.</li> 
-            <li>Request server-side encrytion when uploading objects.</li> 
-            <li>Add user metadata to objects.</li> 
-        </ul>
-    </div>
-
-    <div class="lab">
-        <h2>Lab 3 - Developing Flexible NoSQL Solutions with Amazon DynamoDB</h2>
-        <p>This lab will require around 60 minutes to complete.</p>
-        <br/>
-        <p>Instructions:</p>
-        <ul>
-            <li>C# page 93</li>
-            <li>Java page 105</li>
-            <li>Python page 118</li>
-        </ul>
-        <br/>
-        <p>Objectives:</p>
-        <ul>
-            <li>Create a table and global secondary index.</li>
-            <li>Add items to a table.</li>
-            <li>Update items by adding additional properties.</li>
-            <li>Query data by using the table's global secondary index.</li>
-        </ul>
-    </div>
-
-    <div class="lab">
-        <h2>Lab 4 - Developing Event-Driven Solutions with AWS Lambda</h2>
-        <p>This lab will require around 45 minutes to complete.</p>
-        <br/>
-        <p>Instructions:</p>
-        <ul>
-            <li>C# page 136</li>
-            <li>Java page 150</li>
-            <li>Python page 165</li>
-        </ul>
-        <br/>
-        <p>Objectives:</p>
-        <ul>
-            <li>Create an Amazon IAM Lambda Execution Role.</li>
-            <li>Create an AWS Lambda function.</li>
-            <li>Configure AWS Lambda function event sources.</li>
-            <li>Monitor a Lambda function using Amazon CloudWatch Logs.</li>
-            <li>Retrieve objects from an Amazon S3 bucket.</li>
-        </ul>
-    </div>
-
-    <div class="lab">
-        <h2>Lab 5 - Developing Messaging Solutions with Amazon SNS and Amazon SQS</h2>
-        <p>This lab will require around 45 minutes to complete.</p>
-        <br/>
-        <p>Instructions:</p>
-        <ul>
-            <li>C# page 186</li>
-            <li>Java page 204</li>
-            <li>Python page 221</li>
-        </ul>
-        <br/>
-        <p>Objectives:</p>
-        <ul>
-            <li>Set up an SNS topic.</li>
-            <li>Publish messages to an SNS topic.</li>
-            <li>Send email messages to subscribers of an SNS topic.</li>
-            <li>Send raw messages to subscribers of an SNS topic.</li>
-            <li>Set up an SQS queue.</li>
-            <li>Receive messages from an SQS queue.</li>
-            <li>Delete messages from an SQS queue.</li>
-        </ul>
-    </div>
-
-    <div class="lab">
-        <h2>Lab 6 - Developing an end to end Application with AWS</h2>
-        <p>This lab will require around 120 minutes to complete.</p>
-        <br/>
-        <p>Instructions:</p>
-        <ul>
-            <li>C# page 244</li>
-            <li>Java page 285</li>
-            <li>Python page 328</li>
-        </ul>
-        <br/>
-        <p>Objectives:</p>
-        <ul>
-            <li>Host a Static Website in an S3 bucket.</li>
-            <li>Create an IAM Policy and Role to give specific access to Lambda.</li>
-            <li>Crate an Amazon Cognito User Pool to authenticate users and control access to API Gateway.</li>
-            <li>Create Lambda functions to perform CRUD operations on a DynamoDB table.</li>
-            <li>Create a Restful API on API Gateway to front Lambda functions.</li>
-            <li>Access to Polly service through API.</li>
-        </ul>
-    </div>
 </body>
 
 </html>
