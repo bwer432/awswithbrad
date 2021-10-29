@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="person-icon.png" type="image/png" />
+    <title>Develoring on AWS</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/33b5c7c1ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                                <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                                &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dev/dev.html">Developing on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dev/dev.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dev/dev_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../dss/dss.html">Developing Serverless Solutions on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../dss/dss.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../dss/dss_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="../coreks/coreks.html">Running Containers on Amazon Elastic Kubernetes Service &raquo
+                            </a>
+                            <ul class="submenu dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="../coreks/coreks.html">Overview</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../coreks/coreks_day1.html">Day 1</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../coreks/coreks_day2.html">Day 2</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../coreks/coreks_day3.html">Day 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../siseco/siseco.html">Security Engineering on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../siseco/siseco.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../siseco/siseco_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../siseco/siseco_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../siseco/siseco_day3.html">Day 3</a></li>
+                                <li><a class="dropdown-item" href="../siseco/siseco_jam.html">AWS Jam Day</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                                <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin"
+                        target="_blank">Course Materials</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS
+                        Qwiklabs</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS
+                        Console</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/"
+                        target="_blank">AWS Certifications</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="mailto:bradswer@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+    </nav>
+
+    <!-- Main Body -->
+
+    <p>
+    <h1>Developing on AWS</h1><h1>AWS Jam Day</h1>
+        <!-- Buttons -->
+        <a href="#" class="float">
+          <i class="fas fa-plus icon"></i>
+        </a>
+        <ul class="floatitem">
+          <li>
+            <a href="../dev/dev.html"><!-- Overview -->
+              <i class="fas fa-dice icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../dev/dev_day1.html"><!-- Day 1 -->
+              <i class="fas fa-dice-one icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../dev/dev_day2.html"><!-- Day 2 -->
+              <i class="fas fa-dice-two icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../dev/dev_day3.html"><!-- Day 3 -->
+              <i class="fas fa-dice-three icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../dev/dev_jam.html"><!-- Day 4 -->
+              <i class="fas fa-dice-four icon"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- End - Buttons -->
+    <table>
+        <tr>
+            <th><b>Module/Lab</b></th>
+            <th><b>Time Estimate</b></th>
+        </tr>
+        <tr>
+            <td>AWS Jam Kickoff Session</td>
+            <td>9:00 AM - 9:45 AM</td>
+        </tr>
+        <tr>
+            <td>First Jam Session: Solve Challenges</td>
+            <td>9:45 AM - 11:45 AM</td>
+        </tr>
+        <tr>
+            <td>Feedback and Progress Review</td>
+            <td>11:45 AM - 12:00 AM</td>
+        </tr>
+        <tr>
+            <td><b>Lunch</b></td>
+            <td>12:00 AM - 1:00 PM</td>
+        </tr>
+        <tr>
+            <td>Second Jam Session: Solve Challenges</td>
+            <td>1:00 PM - 2:30 PM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>2:30 PM - 2:40 PM</td>
+        </tr>
+        <tr>
+            <td>Third Jam Session: Solve Challenges</td>
+            <td>2:40 PM - 4:10 PM</td>
+        </tr>
+        <tr>
+            <td><b>Final Break</b></td>
+            <td>4:10 PM - 4:20 PM</td>
+        </tr>
+        <tr>
+            <td>AWS Jam Closing Session</td>
+            <td>4:20 PM - 5:00 PM</td>
+        </tr>
+    </table>
+    </p>
+    <p>
+    <h2>AWS Jam</h2>
+    <ul>
+        <li>Participate in team based challenges in a real AWS environment</li>
+        <li>Compete with your colleagues in a gamified, hands-on learning experience</li>
+        <li>Apply your learning from the course on various AWS services</li>
+    </ul>
+    <h2>AWS Jam Resources</h2>
+    <p>The following resource links will provide information about AWS Jam:</p>
+    <ul>
+        <li><a href="https://jam.awsevents.com" target="_blank">AWS Jam Site</a></li>
+        <li><a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank">Shared Responsibility Model</a></li>
+        <li><a href="https://aws.amazon.com/blogs/training-and-certification/7-popular-classroom-courses-now-offered-with-aws-jam/" target="_blank">Hand-Selected for Hands-On Experience: 7 Popular Classroom Courses Now Offered with AWS Jam </a></li>
+        <li><a href="https://aws-jam-docs.s3-us-west-2.amazonaws.com/aws-jam-flyer.pdf" target="_blank">What is the AWS Jam?</a></li>
+    </ul>
+    <br>
+    </p>
+
+</body>
+
+</html>
