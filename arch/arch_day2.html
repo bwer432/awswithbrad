@@ -20,6 +20,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/33b5c7c1ed.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -98,6 +99,33 @@
 
     <p>
         <h1>Architecting on AWS</h1><h1>Day 2</h1>
+        <!-- Buttons -->
+        <a href="#" class="float">
+          <i class="fas fa-plus icon"></i>
+        </a>
+        <ul class="floatitem">
+          <li>
+            <a href="../arch/arch.html"><!-- Overview -->
+              <i class="fas fa-dice icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../arch/arch_day1.html"><!-- Day 1 -->
+              <i class="fas fa-dice-one icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../arch/arch_day2.html"><!-- Day 2 -->
+              <i class="fas fa-dice-two icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../arch/arch_day3.html"><!-- Day 3 -->
+              <i class="fas fa-dice-three icon"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- End - Buttons -->
     <table>
         <tr>
             <th><b>Module/Lab</b></th>
@@ -105,43 +133,51 @@
         </tr>
         <tr>
             <td>Review</td>
-            <td>9:00 AM - 9:30 AM</td>
+            <td>9:00 AM - 9:20 AM</td>
         </tr>
         <tr>
-            <td>Module 6: Networking in AWS Part 2</td>
-            <td>9:30 AM - 10:40 AM</td>
+            <td>Module 5: Storage</td>
+            <td>9:20 AM - 10:50 AM</td>
         </tr>
         <tr>
             <td><b>Break</b></td>
-            <td>15 Minutes</td>
+            <td>10 Minutes</td>
         </tr>
         <tr>
-            <td>Module 7: AWS Identity and Access Management</td>
-            <td>10:55 AM - 12:00 PM</td>
+            <td>Module 6: Database Services</td>
+            <td>11:00 AM - 12:10 PM</td>
         </tr>
         <tr>
             <td><b>Lunch</b></td>
-            <td>12:00 PM - 1:00 PM</td>
+            <td>12:10 PM - 1:10 PM</td>
         </tr>
         <tr>
-            <td>Module 8: Elasticity, High Availability and Monitoring</td>
-            <td>1:00 PM - 1:50 PM</td>
+            <td>Lab 3: Create a database layer in your Amazon VPC Infrastructure</td>
+            <td>1:10 PM - 1:40 PM</td>
         </tr>
         <tr>
-            <td>Lab 4: Creating a Highly Available Environment</td>
-            <td>1:50 PM - 2:30 PM</td>
+            <td>Module 7: Monitoring and Scaling</td>
+            <td>1:40 PM - 2:40 PM</td>
         </tr>
         <tr>
             <td><b>Break</b></td>
-            <td>15 Minutes</td>
+            <td>10 Minutes</td>
         </tr>
         <tr>
-            <td>Module 9: Automation</td>
-            <td>2:45 PM - 3:45 PM</td>
+            <td>Lab 4: Configure high availability in your Amazon VPC</td>
+            <td>2:50 PM - 3:20 PM</td>
         </tr>
         <tr>
-            <td> Lab 5: Automating Infrastructure Deployment with AWS CloudFormation</td>
-            <td>3:45 PM - 4:30 PM</td>
+            <td>Module 8: Automation</td>
+            <td>3:20 PM - 3:50 PM</td>
+        </tr>
+        <tr>
+            <td><b>Break</b></td>
+            <td>10 Minutes</td>
+        </tr>
+        <tr>
+            <td>Module 9: Containers</td>
+            <td>4:00 PM - 4:40 PM</td>
         </tr>
     </table>
     </p>
@@ -150,56 +186,62 @@
     <p>The following resource links will provide more information and help reinforce topics covered during Day 2 of
     Architecting on AWS:</p>
 
-    <h2>Module 6: Networking In AWS Part 2</h2>
+    <h2>Module 5: Storage</h2>
     <ul>
-        <li><a href="https://aws.amazon.com/solutions/aws-global-transit-network/" target="_blank">AWS Global Transit
-                Network</a></li>
-        <li><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html" target="_blank">What is AWS
-                Site-to-Site VPN?</a></li>
-        <li><a href="https://aws.amazon.com/directconnect/features/" target="_blank">AWS Direct Connect features</a>
-        </li>
-        <li><a href="https://aws.amazon.com/directconnect/resiliency-recommendation/" target="_blank">AWS Direct Connect
-                Resiliency Recommendations</a></li>
-        <li><a href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html" target="_blank">AWS Transit
-                Gateway</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/OSI_model" target="_blank">OSI model</a></li>
-        <li><a href="https://aws.amazon.com/elasticloadbalancing/features/" target="_blank">Elastic Load Balancing
-                features</a></li>
-        <li><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#deregistration-delay"
-                target="_blank">Deregistration Delay</a></li>
-        <li><a href="https://aws.amazon.com/about-aws/whats-new/2019/03/application-load-balancers-now-support-advanced-request-routing/"
-                target="_blank">Application Load Balancers now Support Advanced Request Routing</a></li>
-        <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html" target="_blank">Amazon
-                Route53</a></li>
+        <li><a href="https://aws.amazon.com/s3/storage-classes/" target="_blank">Amazon S3 Storage Classes</a></li>
+        <li><a href="https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html"
+                target="_blank">Amazon S3 Transfer Acceleration</a></li>
+        <li><a href="https://awspolicygen.s3.amazonaws.com/policygen.html" target="_blank">AWS Policy Generator</a></li>
+        <li><a href="https://aws.amazon.com/s3/pricing/" target="_blank">Amazon S3 pricing</a></li>
+        <li><a href="https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/"
+                target="_blank">Region Table</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/add-bucket-policy.html" target="_blank">How
+                do I add an S3 Bucket policy?</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html"
+                target="_blank">Restrictions and Limitations</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html#access-bucket-intro"
+                target="_blank">Bucket Access</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html" target="_blank">Hosting a
+                static website on Amazon S3</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html" target="_blank">Multipart Upload
+                Overview</a></li>
+        <li><a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock-policy.html" target="_blank">Amazon
+                S3 Glacier Access Control with Vault Lock Policies</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"
+                target="_blank">Using Amazon S3 block public access</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html" target="_blank">Object
+                lifecycle management</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/block-public-access.html"
+                target="_blank">How do I block public access to S3 buckets?</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html" target="_blank">Locking objects
+                using S3 Object Lock</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html" target="_blank">Cross-origin resource
+                sharing (CORS)</a></li>
+        <li><a href="https://aws.amazon.com/snowball/" target="_blank">AWS Snowball</a></li>
+        <li><a href="https://aws.amazon.com/snowmobile/" target="_blank">AWS Snowmobile</a></li>
     </ul>
-    <h2>Module 7: AWS Identity and Access Management (IAM)</h2>
+    <h2>Module 6: Database Services</h2>
     <ul>
-        <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html" target="_blank">AWS Identity &
-                Access Management</a></li>
-        <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html" target="_blank">AWS Account
-                Root User</a></li>
-        <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers.html" target="_blank">Identity
-                Providers and Federation</a></li>
-        <li><a href="https://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html" target="_blank">AWS Security
-                Token Service</a></li>
-        <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html"
-                target="_blank">Logging IAM and AWS STS API Calls with AWS CloudTrail</a></li>
-        <li><a href="https://aws.amazon.com/blogs/security/aws-federated-authentication-with-active-directory-federation-services-ad-fs/"
-                target="_blank">AWS Federated Authentication with Active Directory Federation Services (AD FS)</a></li>
-        <li><a href="https://aws.amazon.com/servicecatalog/?aws-service-catalog.sort-by=item.additionalFields.createdDate&aws-service-catalog.sort-order=desc"
-                target="_blank">AWS Service Catalog</a></li>
-        <li><a href="https://aws.amazon.com/solutions/aws-landing-zone/" target="_blank">AWS Landing Zone</a></li>
-        <li><a href="https://aws.amazon.com/about-aws/whats-new/2019/03/service-control-policies-enable-fine-grained-permission-controls/"
-                target="_blank">Service control policies in AWS Organizations enable fine-grained permission
-                controls</a></li>
-        <li><a href="https://aws.amazon.com/blogs/security/how-to-rotate-access-keys-for-iam-users/" target="_blank">How
-                to Rotate Access Keys for IAM Users</a></li>
-        <li><a href="https://www.youtube.com/watch?v=y7-fAT3z8Lo&feature=youtu.be" target="_blank">Become an AWS IAM
-                Policy Ninja in 60 Minutes or Less</a></li>
-        <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html" target="_blank">Policies and
-                Permissions</a></li>
+        <li><a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html" target="_blank">What Is AWS Database
+                Migration Service?</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"
+                target="_blank">What is Amazon Aurora?</a></li>
+        <li><a href="https://aws.amazon.com/dynamodb/" target="_blank">Amazon DynamoDB</a></li>
+        <li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html"
+                target="_blank">Global TablesMulti-Region Replication with DynamoDB</a></li>
+        <li><a href="https://aws.amazon.com/dynamodb/global-tables/" target="_blank">Global Tables</a></li>
+        <li><a href="https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Welcome.html"
+                target="_blank">What Is the AWS Schema Conversion Tool?</a></li>
+        <li><a href="https://aws.amazon.com/dynamodb/getting-started/" target="_blank">Getting Started with Amazon
+                DynamoDB</a></li>
+        <li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html"
+                target="_blank">Best Practices for Designing and Architecting with DynamoDB</a></li>
+        <li><a href="https://aws.amazon.com/rds/oracle/" target="_blank">Amazon RDS for Oracle</a></li>
+        <li><a href="https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-transactions/" target="_blank">Amazon DynamoDB
+                Transactions</a></li>
     </ul>
-    <h2>Module 8: Elasticity, High Availability, and Monitoring</h2>
+
+    <h2>Module 7: Monitoring and Scaling</h2>
     <ul>
         <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html"
                 target="_blank">What Is Amazon CloudWatch?</a></li>
@@ -235,7 +277,7 @@
         <li><a href="https://aws.amazon.com/blogs/aws/new-auto-scaling-for-amazon-dynamodb/" target="_blank">Auto
                 Scaling for Amazon DynamoDB</a></li>
     </ul>
-    <h2>Module 9: Automation</h2>
+    <h2>Module 8: Automation</h2>
     <ul>
         <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html" target="_blank">AWS
                 CloudFormation</a></li>
@@ -250,7 +292,7 @@
         <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html"
                 target="_blank">AWS System Manager</a></li>
         <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html"
-                target="_blank">AWS Systems Manager Patch Manage</a></li>
+                target="_blank">AWS Systems Manager Patch Manager</a></li>
         <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-maintenance.html"
                 target="_blank">AWS Systems Manager Maintenance Windows</a></li>
         <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state.html"
@@ -266,6 +308,25 @@
         <li><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html" target="_blank">AWS Elastic
                 Beanstalk</a></li>
     </ul>
+    <h2>Module 9: Containers</h2>
+    <ul>
+        <!-- snagged initial revision of these links from coreks 1.1 appendix a -->
+        <li><a href="https://12factor.net/" target="_blank">The Twelve-Factor App</a></li>
+        <li><a href="https://aws.amazon.com/containers/" target="_blank">Containers on AWS</a></li>
+        <li><a href="https://medium.com/codingthesmartway-com-blog/docker-beginners-guide-part-1-images-containers-6f3507fffc98" target="_blank">Docker — Beginner’s Guide - Part 1: Images & Containers</a></li>
+        <li><a href="https://www.inovex.de/blog/containers-docker-containerd-nabla-kata-firecracker/" target="_blank">Welcome To The Container Jungle: Docker vs. containerd vs. Nabla vs. Kata vs. Firecracker and more!</a></li>
+        <li><a href="https://docs.docker.com/" target="_blank">Dcker Docs</a></li>
+        <li><a href="https://docs.docker.com/engine/reference/builder/" target="_blank">Dockerfile reference</a></li>
+        <li><a href="https://nodejs.org/en/docs/guides/nodejs-docker-webapp/" target="_blank">Dockerizing a Node.js web app</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth" target="_blank">Amazon ECR private registries</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iqqDU2crIEQ&t=30s" target="_blank">How to Get Started with Docker</a></li>
+        <li><a href="https://www.youtube.com/watch?v=xmLVNpyJ530&t=30s" target="_blank">How to Build and Test Your Docker Images in the Cloud</a></li>
+        <li><a href="https://tanzu.vmware.com/content/blog/1-factor-app-kubernetes-modernization" target="_blank">The 1-Factor App: Using Kubernetes to Get a Jump Start on Modernization</a></li>
+        <li><a href="https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/" target="_blank">Don't Panic: Kubernetes and Docker</a></li>
+        <li><a href="https://kubernetes.io/docs/setup/production-environment/container-runtimes/" target="_blank">Container runtimes</a></li>
+        <li><a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/" target="_blank">Pull an Image from a Private Registry</a></li>
+        <li><a href="https://opencontainers.org/" target="_blank">Open Container Initiative</a></li>
+    <ul>
     </p>
 
 

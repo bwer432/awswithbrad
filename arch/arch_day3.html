@@ -20,6 +20,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/33b5c7c1ed.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -98,6 +99,33 @@
 
     <p>
         <h1>Architecting on AWS</h1><h1>Day 3</h1>
+        <!-- Buttons -->
+        <a href="#" class="float">
+          <i class="fas fa-plus icon"></i>
+        </a>
+        <ul class="floatitem">
+          <li>
+            <a href="../arch/arch.html"><!-- Overview -->
+              <i class="fas fa-dice icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../arch/arch_day1.html"><!-- Day 1 -->
+              <i class="fas fa-dice-one icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../arch/arch_day2.html"><!-- Day 2 -->
+              <i class="fas fa-dice-two icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../arch/arch_day3.html"><!-- Day 3 -->
+              <i class="fas fa-dice-three icon"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- End - Buttons -->
     <table>
         <tr>
             <th><b>Module/Lab</b></th>
@@ -105,47 +133,47 @@
         </tr>
         <tr>
             <td><b>Review</b></td>
-            <td>9:00 AM - 9:30 AM</td>
+            <td>9:00 AM - 9:20 AM</td>
         </tr>
         <tr>
-            <td>Module 10: Caching</td>
-            <td>9:30 AM - 10:20 AM</td>
+            <td>Module 10: Networking, part 2</td>
+            <td>9:20 AM - 10:20 AM</td>
         </tr>
         <tr>
             <td><b>Break</b></td>
-            <td>15 Minutes</td>
+            <td>10 Minutes</td>
         </tr>
         <tr>
-            <td>Module 11: Building Decoupled Architectures</td>
-            <td>10:35 AM - 11:15 AM</td>
+            <td>Module 11: Serverless Architecture</td>
+            <td>10:30 AM - 11:20 AM</td>
         </tr>
         <tr>
-            <td>Module 12: Microservices and Serverless Architectures</td>
-            <td>11:15 AM - 12:00 PM</td>
+            <td>Lab 5: BUild a Serverless Architecture</td>
+            <td>11:20 AM - 12:05 PM</td>
         </tr>
         <tr>
             <td><b>Lunch</b></td>
-            <td>12:00 PM - 1:00 PM</td>
+            <td>12:05 PM - 1:05 PM</td>
         </tr>
         <tr>
-            <td>Lab 6: Implementing a Serverless Architecture with AWS Managed Services</td>
-            <td>1:00 PM - 1:40 PM</td>
+            <td>Module 12: Edge Services</td>
+            <td>1:05 PM - 1:55 PM</td>
         </tr>
         <tr>
-            <td>Module 13: RTO/RPO and Backup Recovery Setup</td>
-            <td>1:40 PM - 2:20 PM</td>
+            <td>Lab 6: Configure an Amazon CloudFront distribution with an Amazon S3 origin</td>
+            <td>1:55 PM - 2:40 PM</td>
         </tr>
         <tr>
-            <td>Module 14: Optimizations and Review</td>
-            <td>2:20 PM - 3:00 PM</td>
+            <td>Module 13: Backup and Recovery</td>
+            <td>2:40 PM - 3:25 PM</td>
         </tr>
         <tr>
             <td><b>Break</b></td>
-            <td>15 Minutes</td>
+            <td>10 Minutes</td>
         </tr>
         <tr>
-            <td>Module 15: Course Wrap Up</td>
-            <td>3:15 PM - ~3:45 PM</td>
+            <td>Capstone Lab</td>
+            <td>3:25 PM - ~5:25 PM</td>
         </tr>
     </table>
     </p>
@@ -153,33 +181,35 @@
     <h2>Resources</h2>
     <p>The following resource links will provide more information and help reinforce topics covered during Day 3 of
     Architecting on AWS:</p>
-    <h2>Module 10: Caching</h2>
+    <h2>Module 10: Networking In AWS Part 2</h2>
     <ul>
-        <li><a href="https://aws.amazon.com/caching/" target="_blank">Caching Overview</a></li>
-        <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorS3Origin.html"
-                target="_blank">Request and Response Behavior for Amazon S3 Origins</a></li>
-        <li><a href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html" target="_blank">What
-                are AWS WAF, AWS shield, and AWS Firewall Manager?</a></li>
-        <li><a href="https://aws.amazon.com/blogs/database/amazon-dynamodb-accelerator-dax-a-read-throughwrite-through-cache-for-dynamodb/"
-                target="_blank">Amazon DynamoDB Accelerator (DAX)A Read-Through/Write-Through Cache for DynamoDB</a>
+        <li><a href="https://aws.amazon.com/solutions/aws-global-transit-network/" target="_blank">AWS Global Transit
+                Network</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html" target="_blank">What is AWS
+                Site-to-Site VPN?</a></li>
+        <li><a href="https://aws.amazon.com/directconnect/features/" target="_blank">AWS Direct Connect features</a>
         </li>
-        <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
-                target="_blank">What Is Amazon CloudFront?</a></li>
-        <li><a
-                href="https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/">Amazon
-                S3 + Amazon CloudFrontA Match Made in the Cloud</a></li>
-        <li><a href="https://docs.aws.amazon.com/elasticache/index.html" target="_blank">Amazon Elasticache</a></li>
+        <li><a href="https://aws.amazon.com/directconnect/resiliency-recommendation/" target="_blank">AWS Direct Connect
+                Resiliency Recommendations</a></li>
+        <li><a href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html" target="_blank">AWS Transit
+                Gateway</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/OSI_model" target="_blank">OSI model</a></li>
+        <li><a href="https://aws.amazon.com/elasticloadbalancing/features/" target="_blank">Elastic Load Balancing
+                features</a></li>
+        <li><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#deregistration-delay"
+                target="_blank">Deregistration Delay</a></li>
+        <li><a href="https://aws.amazon.com/about-aws/whats-new/2019/03/application-load-balancers-now-support-advanced-request-routing/"
+                target="_blank">Application Load Balancers now Support Advanced Request Routing</a></li>
+        <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html" target="_blank">Amazon
+                Route53</a></li>
     </ul>
-    <h2>Module 11 Building Decoupled Architectures</h2>
+    <h2>Module 11: Serverless</h2>
     <ul>
         <li><a href="https://aws.amazon.com/blogs/compute/building-loosely-coupled-scalable-c-applications-with-amazon-sqs-and-amazon-sns/"
                 target="_blank">Building Loosely Coupled, Scalable, C# Applications with Amazon SQS and Amazon SNS</a>
         </li>
         <li><a href="https://aws.amazon.com/blogs/compute/encrypting-messages-published-to-amazon-sns-with-aws-kms/"
                 target="_blank">Encrypting messages published to Amazon SNS with AWS KMS</a></li>
-    </ul>
-    <h2>Module 12: Microservices and Serverless Architectures</h2>
-    <ul>
         <li><a href="https://aws.amazon.com/microservices/" target="_blank">Microservices</a></li>
         <li><a href="https://aws.amazon.com/cloud-map/" target="_blank">AWS Cloud Map</a></li>
         <li><a href="https://www.youtube.com/watch?v=qTE1PbdY3hY" target="_blank">Introducing AWS Cloud Map and AWS App
@@ -206,7 +236,25 @@
         <li><a href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring_overview.html"
                 target="_blank">Monitoring AWS WAF, AWS Firewall Manager, and AWS Shield Advanced</a></li>
     </ul>
-    <h2>Module 13: RTO_RPO and Backup Recovery Setup</h2>
+    <h2>Module 12: Edge Services</h2>
+    <ul>
+        <li><a href="https://aws.amazon.com/caching/" target="_blank">Caching Overview</a></li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorS3Origin.html"
+                target="_blank">Request and Response Behavior for Amazon S3 Origins</a></li>
+        <li><a href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html" target="_blank">What
+                are AWS WAF, AWS shield, and AWS Firewall Manager?</a></li>
+        <li><a href="https://aws.amazon.com/blogs/database/amazon-dynamodb-accelerator-dax-a-read-throughwrite-through-cache-for-dynamodb/"
+                target="_blank">Amazon DynamoDB Accelerator (DAX)A Read-Through/Write-Through Cache for DynamoDB</a>
+        </li>
+        <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
+                target="_blank">What Is Amazon CloudFront?</a></li>
+        <li><a
+                href="https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/">Amazon
+                S3 + Amazon CloudFrontA Match Made in the Cloud</a></li>
+        <li><a href="https://docs.aws.amazon.com/elasticache/index.html" target="_blank">Amazon Elasticache</a></li>
+    </ul>
+
+    <h2>Module 13: Backup and Recovery</h2>
     <ul>
         <li><a href="https://aws.amazon.com/datasync/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc"
                 target="_blank">AWS DataSync</a></li>
