@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="person-icon.png" type="image/png" />
+    <title>EKS Day 3</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/33b5c7c1ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+        
+        <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Courses</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="dropdown-item" href="../advarc/advarc.html">Advanced Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../advarc/advarc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../advarc/advarc_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../arch/arch.html">Architecting on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../arch/arch.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../arch/arch_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../arcacc/arcacc.html">Architecting on AWS - Accelerator &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../arcacc/arcacc.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day3.html">Day 3</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day4.html">Day 4</a></li>
+                            <li><a class="dropdown-item" href="../arcacc/arcacc_day5.html">Day 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../cpe/cpe.html">AWS Cloud Practitioner Essentials &raquo
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="../cpe/cpe.html">Overview</a></li>
+                        <li><a class="dropdown-item" href="../cpe/cpe_day1.html">Day 1</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../tess/tess.html">AWS Technical Essentials &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../tess/tess.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../tess/tess_day1.html">Day 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Cloud Financial Management for Builders
+                            &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../financial_mgmt/financial_mgmt_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../dev/dev.html">Developing on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../dev/dev.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../dev/dev_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../dev/dev_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../dev/dev_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../dss/dss.html">Developing Serverless Solutions on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../dss/dss.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../dss/dss_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../dss/dss_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../dss/dss_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="../coreks/coreks.html">Running Containers on Amazon Elastic Kubernetes Service &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks.html">Overview</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks_day1.html">Day 1</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks_day2.html">Day 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../coreks/coreks_day3.html">Day 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="../codeks/codeks.html">Amazon EKS for Developers &raquo
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="../codeks/codeks.html">Overview</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../codeks/codeks_day1.html">Day 1</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../codeks/codeks_day2.html">Day 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../codeks/codeks_day3.html">Day 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../siseco/siseco.html">Security Engineering on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../siseco/siseco.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../siseco/siseco_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../siseco/siseco_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../siseco/siseco_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="dropdown-item" href="../sysops/sysops.html">Systems Operations on AWS &raquo </a>
+                        <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="../sysops/sysops.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day1.html">Day 1</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day2.html">Day 2</a></li>
+                            <li><a class="dropdown-item" href="../sysops/sysops_day3.html">Day 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="https://evantage.gilmoreglobal.com/#/user/signin" target="_blank">Course Materials</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.qwiklabs.com/" target="_blank">AWS Qwiklabs</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/console/" target="_blank">AWS Console</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="https://aws.amazon.com/certification/" target="_blank">AWS Certifications</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="mailto:bradswer@amazon.com">Contact Me</a> </li>
+        </div> <!-- navbar-collapse.// -->
+        </nav>
+
+        <!-- Main Body -->
+        <p>
+            <h1>Amazon Elastic Kubernetes Service (Amazon EKS) for Developers</h1><h1>Day 3</h1>
+        <!-- Buttons -->
+        <a href="#" class="float">
+          <i class="fas fa-plus icon"></i>
+        </a>
+        <ul class="floatitem">
+          <li>
+            <a href="../codeks/codeks.html"><!-- Overview -->
+              <i class="fas fa-dice icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../codeks/codeks_day1.html"><!-- Day 1 -->
+              <i class="fas fa-dice-one icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../codeks/codeks_day2.html"><!-- Day 2 -->
+              <i class="fas fa-dice-two icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="../codeks/codeks_day3.html"><!-- Day 3 -->
+              <i class="fas fa-dice-three icon"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- End - Buttons -->
+            <table>
+                <tr>
+                    <th><b>Module/Lab</b></th>
+                    <th><b>Time Estimate</b></th>
+                </tr>
+                <tr>
+                    <td><b>Review</b></td>
+                    <td>9:00 AM - 9:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Module 6: Managing Storage in Amazon EKS</td>
+                    <td>9:30 AM - 10:20 AM</td>
+                </tr>
+                <tr>
+                    <td>Lab 5: Persistent Storage in Amazon EKS</td>
+                    <td>10:20 AM - 11:20 AM</td>
+                </tr>
+                <tr>
+                    <td><b>Break </b></td>
+                    <td>10 Minutes</td>
+                </tr>
+                <tr>
+                    <td>Module 9: Managing Authentication and Authorization in Amazon EKS</td>
+                    <td>11:30 AM - 12:30 PM</td>
+                </tr>
+                <tr>
+                    <td><b>Lunch</b></td>
+                    <td>12:30 PM - 1:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Module 10: Implementing Secure Workflows</td>
+                    <td>1:30 PM - 2:30 PM</td>
+                </tr>
+                <tr>
+                    <td><b>Break </b></td>
+                    <td>10 Minutes</td>
+                </tr>
+                <tr>
+                    <td>Lab 7: Capstone Exercise</td>
+                    <td>2:40 PM - 4:40 PM</td>
+                </tr>
+                <tr>
+                    <td>Course Wrap-Up and Optional Special Topics</td>
+                    <td>4:40 PM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Appendix A: Container Fundamentals</td>
+                    <td>for reference</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+            <h2>Resources</h2>
+                <p>The following resource links will provide more information and help reinforce topics covered during Day 3:</p>
+            <h2>Module 7: Manage networking in Amazon EKS</h2>
+            <ul>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html" target="_blank">CNI custom networking</a></li>
+                <li><a href="https://github.com/amazon-archives/aws-app-mesh-inject" target="_blank">App Mesh Inject</a></li>
+                <li><a href="https://github.com/aws/aws-app-mesh-controller-for-k8s" target="_blank">AWS App Mesh Controller For K8s</a></li>
+                <li><a href="https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/" target="_blank">A Guide to the Kubernetes Networking Model</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/de-mystifying-cluster-networking-for-amazon-eks-worker-nodes/" target="_blank">De-mystifying cluster networking for Amazon EKS worker nodes</a></li>
+                <li><a href="https://kubernetes.io/blog/2016/08/kubernetes-namespaces-use-cases-insights/" target="_blank">Kubernetes Namespaces: use cases and insights</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/cross-account-iam-roles-for-kubernetes-service-accounts/" target="_blank">Cross account IAM roles for Kubernetes service accounts</a></li>
+                <li><a href="https://www.digitalocean.com/community/tutorials/how-to-inspect-kubernetes-networking" target="_blank">How To Inspect Kubernetes Networking</a></li>
+                <li><a href="https://www.nickaws.net/aws/2019/11/26/CoreDNS-and-Route53.html" target="_blank">CoreDNS and Route53</a></li>
+                <li><a href="https://aws.amazon.com/blogs/compute/learning-aws-app-mesh/" target="_blank">Learning AWS App Mesh</a></li>
+                <li><a href="https://levelup.gitconnected.com/deciphering-the-difference-between-a-service-mesh-and-api-gateway-c57e4abec302" target="_blank">Deciphering the Difference Between a Service Mesh and API Gateway</a></li>
+                <li><a href="https://aws.amazon.com/blogs/compute/integrating-aws-x-ray-with-aws-app-mesh/" target="_blank">Integrating AWS X-Ray with AWS App Mesh</a></li>
+                <li><a href="https://www.projectcalico.org/everything-you-need-to-know-about-kubernetes-pod-networking-on-aws/" target="_blank">Everything you need to know about Kubernetes pod networking on AWS</a></li>
+                <li><a href="https://www.youtube.com/watch?v=wosJ-RBLnRE" target="_blank">Lessons learnt while operating multi-tenant kubernetes cluster in production - Prateek Nayak (MYOB)</a></li>
+                <li><a href="https://www.youtube.com/watch?v=vrYLrx-a_Wg" target="_blank">AWS re:Invent 2017: Deep Dive into Amazon EKS</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/security-groups-for-pods.html" target="_blank">Security groups for pods</a></li>
+                <li><a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/" target="_blank">Cluster Networking</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html" target="_blank">Application load balancing on Amazon EKS</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/introducing-cis-amazon-eks-benchmark/" target="_blank">Introducing The CIS Amazon EKS Benchmark</a></li>
+                <li><a href="https://github.com/aws/aws-app-mesh-roadmap/projects/1" target="_blank">aws-app-mesh-roadmap</a></li>
+                <li><a href="https://d1.awsstatic.com/whitepapers/using-service-meshes-in-aws.pdf" target="_blank">Using Service Meshes in AWS Cloud native networking use cases and good practices</a></li>
+            </ul>
+            <h2>Module 8: Managing Authentication and Authorization in Amazon EKS</h2>
+            <ul>
+                <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/authorization/" target="_blank">Authorization Overview</a></li>
+                <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/" target="_blank">Using RBAC Authorization</a></li>
+                <li><a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/" target="_blank">Configure Service Accounts for Pods</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html" target="_blank">Managing users or IAM roles for your cluster</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html" target="_blank">IAM roles for service accounts</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/best-practices-security.html#restrict-ec2-credential-access" target="_blank">Restricting access to the IMDS and Amazon EC2 instance profile credentials</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html" target="_blank">Cluster authentication</a></li>
+                <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#default-roles-and-role-bindings" target="_blank">Default roles and role bindings</a></li>
+                <li><a href="https://github.com/FairwindsOps/rbac-lookup" target="_blank">RBAC Lookup</a></li>
+                <li><a href="https://codeberg.org/hjacobs/kube-ops-view" target="_blank">Kubernetes Operational View</a></li>
+                <li><a href="https://github.com/aws/amazon-eks-pod-identity-webhook" target="_blank">Amazon EKS Pod Identity Webhook</a></li>
+                <li><a href="https://github.com/kubernetes-sigs/aws-iam-authenticator" target="_blank">AWS IAM Authenticator for Kubernetes</a></li>
+                <li><a href="https://www.cncf.io/blog/2018/08/01/demystifying-rbac-in-kubernetes/" target="_blank">Demystifying RBAC in Kubernetes</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/enabling-cross-account-access-to-amazon-eks-cluster-resources/" target="_blank">Enabling cross-account access to Amazon EKS cluster resources</a></li>
+                <li><a href="https://github.com/awslabs/amazon-eks-irsa-cfn" target="_blank">Amazon EKS IAM Role for Service Accounts CDK/CloudFormation Library</a></li>
+                <li><a href="https://www.cncf.io/webinars/role-based-access-control-rbac-policies-in-kubernetes/" target="_blank">Role based access control (RBAC) policies in Kubernetes</a></li>
+                <li><a href="https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/" target="_blank">Introducing fine-grained IAM roles for service accounts</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/manage-amazon-eks-with-okta-sso/" target="_blank">Manage Amazon EKS with Okta SSO</a></li>
+            </ul>
+            <h2>Module 9: Implementing Secure Workflows</h2>
+            <ul>
+                <li><a href="https://docs.docker.com/develop/develop-images/multistage-build/" target="_blank">Use multi-stage builds</a></li>
+                <li><a href="https://github.com/IBM/portieris" target="_blank">Portieris</a></li>
+                <li><a href="https://github.com/quay/clair" target="_blank">Clair</a></li>
+                <li><a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html" target="_blank">Allowing users in other accounts to use a CMK</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/using-eks-encryption-provider-support-for-defense-in-depth/" target="_blank">Using EKS encryption provider support for defense-in-depth</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/aws-secrets-controller-poc/" target="_blank">AWS Secrets Controller PoC: integrating AWS Secrets Manager with Kubernetes</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/using-gatekeeper-as-a-drop-in-pod-security-policy-replacement-in-amazon-eks/" target="_blank">Using Gatekeeper as a drop-in Pod Security Policy replacement in Amazon EKS</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/introducing-security-groups-for-pods/" target="_blank">Introducing security groups for pods</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/calico.html" target="_blank">Installing Calico on Amazon EKS</a></li>
+                <li><a href="https://aws.amazon.com/blogs/containers/introducing-security-groups-for-pods/" target="_blank">Introducing security groups for pods</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/security-groups-for-pods.html" target="_blank">Security groups for pods</a></li>
+            </ul>
+            <h2>Module 10: Managing Upgrades in Amazon EKS</h2>
+            <ul>
+                <li><a href="https://kubernetes.io/docs/setup/release/notes/" target="_blank">Kubernetes Release Notes</a></li>
+                <li><a href="https://kubernetes.io/docs/setup/release/version-skew-policy/" target="_blank">Kubernetes version and version skew support policy</a></li>
+                <li><a href="https://kubernetes.io/docs/reference/using-api/deprecation-policy/" target="_blank">Kubernetes Deprecation Policy</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/update-cluster.html" target="_blank">Updating a cluster</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/update-workers.html" target="_blank">Self-managed node updates</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/update-managed-node-group.html" target="_blank">Updating a managed node group</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html" target="_blank">Amazon EKS platform versions</a></li>
+                <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html" target="_blank">Amazon EKS Kubernetes versions</a></li>
+                <li><a href="https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/" target="_blank">Safely Drain a Node</a></li>
+                <li><a href="https://github.com/fluxcd/flagger" target="_blank">flagger</a></li>
+                <li><a href="https://www.pulumi.com/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/" target="_blank">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a></li>
+                <li><a href="https://github.com/hellofresh/eks-rolling-update" target="_blank">EKS Rolling Update</a></li>
+            </ul>
+            <h2>Appendix A: Container Fundamentals</h2>
+            <ul>
+                <li><a href="https://12factor.net/" target="_blank">The Twelve-Factor App</a></li>
+                <li><a href="https://aws.amazon.com/containers/" target="_blank">Containers on AWS</a></li>
+                <li><a href="https://medium.com/codingthesmartway-com-blog/docker-beginners-guide-part-1-images-containers-6f3507fffc98" target="_blank">Docker — Beginner’s Guide - Part 1: Images & Containers</a></li>
+                <li><a href="https://www.inovex.de/blog/containers-docker-containerd-nabla-kata-firecracker/" target="_blank">Welcome To The Container Jungle: Docker vs. containerd vs. Nabla vs. Kata vs. Firecracker and more!</a></li>
+                <li><a href="https://docs.docker.com/" target="_blank">Dcker Docs</a></li>
+                <li><a href="https://docs.docker.com/engine/reference/builder/" target="_blank">Dockerfile reference</a></li>
+                <li><a href="https://nodejs.org/en/docs/guides/nodejs-docker-webapp/" target="_blank">Dockerizing a Node.js web app</a></li>
+                <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth" target="_blank">Amazon ECR private registries</a></li>
+                <li><a href="https://www.youtube.com/watch?v=iqqDU2crIEQ&t=30s" target="_blank">How to Get Started with Docker</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xmLVNpyJ530&t=30s" target="_blank">How to Build and Test Your Docker Images in the Cloud</a></li>
+                <li><a href="https://tanzu.vmware.com/content/blog/1-factor-app-kubernetes-modernization" target="_blank">The 1-Factor App: Using Kubernetes to Get a Jump Start on Modernization</a></li>
+                <li><a href="https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/" target="_blank">Don't Panic: Kubernetes and Docker</a></li>
+                <li><a href="https://kubernetes.io/docs/setup/production-environment/container-runtimes/" target="_blank">Container runtimes</a></li>
+                <li><a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/" target="_blank">Pull an Image from a Private Registry</a></li>
+                <li><a href="https://opencontainers.org/" target="_blank">Open Container Initiative</a></li>
+            </ul>
+            <br>
+            </p>
+
+</body>
+
+</html>
